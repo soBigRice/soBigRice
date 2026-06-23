@@ -1,6 +1,9 @@
 <div align="center">
 
-<img src="./assets/hero-terminal.svg" alt="soBigRice — 米大饭的终端" width="92%" />
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="./assets/hero-terminal-light.svg" />
+  <img src="./assets/hero-terminal.svg" alt="soBigRice — 米大饭的终端" width="92%" />
+</picture>
 
 <p>
   <a href="https://blog.sobigrice.com"><img src="https://img.shields.io/badge/blog-blog.sobigrice.com-39d353?style=flat-square&labelColor=0d1117&logo=rss&logoColor=39d353" alt="Blog" /></a>
@@ -146,7 +149,10 @@
 ```
 
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=ts,js,nodejs,vue,threejs,webgl,rust,swift,c,git,githubactions,vercel&theme=dark&perline=12" alt="技术栈" />
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=ts,js,nodejs,vue,threejs,webgl,rust,swift,c,git,githubactions,vercel&theme=light&perline=12" />
+    <img src="https://skillicons.dev/icons?i=ts,js,nodejs,vue,threejs,webgl,rust,swift,c,git,githubactions,vercel&theme=dark&perline=12" alt="技术栈" />
+  </picture>
 </div>
 
 ---
@@ -155,12 +161,24 @@
 
 <div align="center">
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=soBigRice&show_icons=true&hide_border=true&count_private=true&bg_color=0d1117&title_color=39d353&icon_color=58a6ff&text_color=c9d1d9" alt="GitHub Stats" />
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=soBigRice&layout=compact&hide_border=true&langs_count=10&bg_color=0d1117&title_color=39d353&text_color=c9d1d9" alt="Top Languages" />
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api?username=soBigRice&show_icons=true&hide_border=true&count_private=true&bg_color=ffffff&title_color=1a7f37&icon_color=0969da&text_color=1f2328" />
+  <img height="170" src="https://github-readme-stats.vercel.app/api?username=soBigRice&show_icons=true&hide_border=true&count_private=true&bg_color=0d1117&title_color=39d353&icon_color=58a6ff&text_color=c9d1d9" alt="GitHub Stats" />
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=soBigRice&layout=compact&hide_border=true&langs_count=10&bg_color=ffffff&title_color=1a7f37&text_color=1f2328" />
+  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=soBigRice&layout=compact&hide_border=true&langs_count=10&bg_color=0d1117&title_color=39d353&text_color=c9d1d9" alt="Top Languages" />
+</picture>
 
-<img width="98%" src="https://github-readme-activity-graph.vercel.app/graph?username=soBigRice&bg_color=0d1117&color=58a6ff&line=39d353&point=ffffff&area=true&area_color=39d353&hide_border=true&custom_title=米大饭的折腾曲线" alt="Activity Graph" />
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=soBigRice&bg_color=ffffff&color=1f2328&line=1a7f37&point=0969da&area=true&area_color=1a7f37&hide_border=true&custom_title=米大饭的折腾曲线" />
+  <img width="98%" src="https://github-readme-activity-graph.vercel.app/graph?username=soBigRice&bg_color=0d1117&color=58a6ff&line=39d353&point=ffffff&area=true&area_color=39d353&hide_border=true&custom_title=米大饭的折腾曲线" alt="Activity Graph" />
+</picture>
 
-<img width="60%" src="https://streak-stats.demolab.com/?user=soBigRice&hide_border=true&background=0d1117&stroke=30363d&ring=58a6ff&fire=e3b341&currStreakLabel=39d353&sideLabels=58a6ff&dates=6e7681&currStreakNum=c9d1d9&sideNums=c9d1d9&dayLabels=6e7681" alt="连续打卡" />
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com/?user=soBigRice&hide_border=true&background=ffffff&stroke=d0d7de&ring=0969da&fire=9a6700&currStreakLabel=1a7f37&sideLabels=0969da&dates=59636e&currStreakNum=1f2328&sideNums=1f2328&dayLabels=59636e" />
+  <img width="60%" src="https://streak-stats.demolab.com/?user=soBigRice&hide_border=true&background=0d1117&stroke=30363d&ring=58a6ff&fire=e3b341&currStreakLabel=39d353&sideLabels=58a6ff&dates=8b949e&currStreakNum=c9d1d9&sideNums=c9d1d9&dayLabels=8b949e" alt="连续打卡" />
+</picture>
 
 </div>
 
@@ -191,7 +209,10 @@
 <summary>&nbsp;🐍 <code>./contribution-snake</code> &nbsp;一条吃格子的小蛇(首次需在 Actions 里跑一次 <b>Generate Snake</b>)</summary>
 <br/>
 <div align="center">
-  <img src="https://raw.githubusercontent.com/soBigRice/soBigRice/output/github-snake-dark.svg" alt="贡献图小蛇" width="98%" />
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/soBigRice/soBigRice/output/github-snake.svg" />
+    <img src="https://raw.githubusercontent.com/soBigRice/soBigRice/output/github-snake-dark.svg" alt="贡献图小蛇" width="98%" />
+  </picture>
 </div>
 </details>
 
@@ -201,5 +222,8 @@
 </div>
 
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=70&color=0:0d1117,100:39d353&section=footer&reversal=true" width="100%" alt="footer" />
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="https://capsule-render.vercel.app/api?type=waving&height=70&color=0:ffffff,100:39d353&section=footer&reversal=true" />
+    <img src="https://capsule-render.vercel.app/api?type=waving&height=70&color=0:0d1117,100:39d353&section=footer&reversal=true" width="100%" alt="footer" />
+  </picture>
 </div>
