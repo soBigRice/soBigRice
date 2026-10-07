@@ -1,4 +1,58 @@
-# GitHub Profile README 喵总联名改版
+# GitHub Profile 设计与维护记录
+
+## 当前版本 · 2026-10-07
+
+状态：实现与自动检查完成。用户已要求提交并更新 GitHub，以便在实际主页审阅；本轮按此授权提交与推送，整体视觉效果仍待用户确认。下方 2026-07-14 记录为历史，不作为当前布局与项目排序的约束。
+
+### 目标与边界
+
+- 个性、好看、高级、直观；首屏识别米大饭与喵总，接着直接看最新公开作品。
+- 当前仓库为 `soBigRice/soBigRice` Profile README，使用 GitHub 原生 Markdown、`picture`、本地图片和 `details`；没有新增前端框架、依赖、工作流。
+- 保留 employee_001 身份、既有站点、全部原作品入口、活动图与贡献小蛇；公开作品优先，统计收进折叠区。
+- 仅修改仓库 README、相关静态素材及本记录；本轮远端更新授权仅覆盖 Profile 仓库，GitHub 账号简介、头像、置顶仓库未调整。
+
+### 信息与展示链路
+
+`README.md` → `assets/profile-masthead.webp`（喵总与 soBigRice 主视觉）→ 中文身份与站点入口 → soRound OS / LynkCo-DiPlay（主题自适应展板、说明、源码与官网）→ Port Guardian / Three Shader Example → 工作台与折叠作品 / 开源足迹。
+
+- `picture` 根据 `prefers-color-scheme: dark` 选择 `project-*-dark.svg`；`img` 默认使用 `project-*-light.svg`。主横幅始终使用黑红品牌视觉。
+- 作品展板是自包含 SVG，PNG 原始界面以 data URI 嵌入，无脚本、外部字体或外部资源请求。圆屏界面仅按实际圆形显示区裁切，内侧内容不改；车机首页保持原始比例与完整画面。
+- 重要项目名称、说明和链接仍是 Markdown 文本，图片都有替代文字。缩小图片后仍可通过正文读懂项目，图片加载失败时可继续访问入口。
+- 源图保留：`assets/miaozong-profile-hero.webp` 未修改，可用于回退或再次生成。已发布版本可从原 Git 历史恢复。
+
+### 当前内容真源（2026-10-07 核对）
+
+- GitHub 公开仓库 API：最新原创项目是 [soRound_os](https://github.com/soBigRice/soRound_os)，最新适配项目是 [LynkCo-DiPlay](https://github.com/soBigRice/LynkCo-DiPlay)，后者为 fork，明确保留 [DiPlay](https://github.com/shihabal3amri/DiPlay) 署名。
+- [soRound OS README](https://github.com/soBigRice/soRound_os/blob/main/README.md)：ESP32-S3 / ESP-IDF / LVGL、466×466 AMOLED、BLE 与双分区 OTA。Profile 不写固定版本号，避免与持续更新的正式 / 内测通道冲突。
+- [LynkCo-DiPlay README](https://github.com/soBigRice/LynkCo-DiPlay/blob/main/README.md)：Lynk OS N 2.0 / Android 9、有线已有实车验证、无线待验证、完整 APK 尚未公开。这是项目已公开记录，不是本任务重新验证了车辆连接；后续发布时应重新核对摘要。
+- 圆屏原生渲染预览来自 `soBigRice/soRound_os/site/assets/apps/weather.png`，车机首页来自 `soBigRice/LynkCo-DiPlay/site/assets/home.png`。两张都是项目界面预览，不能当作设备验收证据。车机上游及许可说明见其 [第三方声明](https://github.com/soBigRice/LynkCo-DiPlay/blob/main/docs/THIRD_PARTY_NOTICES.md)。
+- [Port Guardian](https://github.com/soBigRice/port-guardian)：扫描、进程溯源与风险分级清理；[Three Shader Example](https://github.com/soBigRice/three_shader_example)：公开案例与在线入口。
+
+### 主视觉生成
+
+使用内置 `imagegen`，参考原有 `assets/miaozong-profile-hero.webp` 生成新横幅，再仅转换为 WebP 编码；保持生成结果的 2243×701 尺寸，约 163 KiB。未替换原图，也未生成项目截图。
+
+最终提示词：
+
+> Use case: identity-preserve. Asset type: premium GitHub profile masthead, landscape 3.2:1 banner, target 1920 x 600. Edit the supplied existing brand image. Preserve the exact photorealistic cat CEO identity, face, cap, black glasses, texture and red rim lighting on the right. Do not replace, redraw in a cartoon style, or add another cat. Preserve its confident attitude. Recompose as a sophisticated designer/developer personal studio cover with generous left negative space, same deep charcoal and ink-black atmosphere, quiet wine-red accent and ultra subtle technical grid only on left. Left half has elegant, very large crisp off-white modern sans-serif typography with text exactly 'soBigRice.' Keep mixed case exactly. Above in tiny widely tracked uppercase monospace: 'INDEPENDENT DEVELOPER'. Below the name in restrained typography text exactly 'IDEAS, MADE REAL.' Bottom left tiny line 'WEB / DESKTOP / HARDWARE'. Name stays on a single line, all text safely inset, clear and high contrast; text is at least 48 px except small labels at 26 px at this size. Clean editorial composition, typographic precision, tactile cinematic detail, premium restrained black and red. Cat fills right 45% without cutting its eyes or face, body can fade to bottom edge. No browser UI, terminal, dashboard, badges, logos, stats, devices, extra slogans or watermarks. This is a final graphic asset, not a mockup of an entire webpage. Keep source-image branding coherent.
+
+### 验证与接管
+
+- GitHub Markdown API 实际渲染成功：保留两组本地作品 `picture`、两处 `details`、项目表格、链接与替代文字。
+- 四个 SVG 可按 XML 解析、尺寸正确、无脚本；README 本地素材均存在，引用的本人仓库均在当前公开仓库列表中。
+- 个人主页、喵总办公室、博客、两个新项目官网、Shader 实验室、领克中文说明、Port Guardian 最新 Release 均返回 200。
+- 浏览器已查看深色与浅色桌面预览（1280×900）及手机预览（390×844），三张主图均加载，页面无横向溢出；作品抽屉可展开并显示原项目入口。
+- 本地预览 HTML 的外层样式模拟 GitHub，内容来自真实 GitHub Markdown API。外层账号栏和实际 GitHub 页面尚未发布检查，不能将预览等同于上线结果。
+- 预览与截图保存在 Codex 本任务可视化目录，不作为部署产物加入仓库。测试服务器、临时下载和浏览器尺寸覆盖在检查后清理。
+- 用户已明确要求“提交更新一下我看看”，授权提交本任务内容并更新 Profile 仓库；实际主页呈现仍待用户审阅，不能将发布用于审阅等同于用户已完整验收。
+
+### 防复发
+
+关键词：Profile / 最新项目 / fork / 真实界面。更新主页时先核对公开仓库更新时间、README 与发布入口，不能直接把本地正在开发的私有项目写进公开主页；fork 可以体现适配成果，但必须保留上游身份。界面图负责展示，正文负责事实与入口，不把图中的无线按钮、版本或示例数据当作已验证能力。旧方案按日期保留，当前摘要需与真实公开状态一致。
+
+---
+
+# 2026-07-14 历史 · GitHub Profile README 喵总联名改版
 
 ## 状态
 
