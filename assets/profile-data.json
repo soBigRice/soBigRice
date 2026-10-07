@@ -1,0 +1,1164 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-10-07",
+  "collected_at": "2026-10-07T15:25:35+00:00",
+  "user": {
+    "login": "soBigRice",
+    "name": "米大饭",
+    "html_url": "https://github.com/soBigRice",
+    "created_at": "2020-04-10T15:25:05Z",
+    "public_repos": 32,
+    "public_gists": 0,
+    "followers": 3,
+    "following": 3
+  },
+  "repositories": [
+    {
+      "name": "soRound_os",
+      "url": "https://github.com/soBigRice/soRound_os",
+      "description": "基于微雪（Waveshare）1.75 寸圆形电容触摸 AMOLED 开发板做的一个精简化系统",
+      "homepage": "https://sobigrice.github.io/soRound_os/",
+      "fork": false,
+      "archived": false,
+      "private": false,
+      "visibility": "public",
+      "pushed_at": "2026-10-07T15:23:04Z",
+      "primary_language": "C",
+      "languages": {
+        "C": 12932918,
+        "Python": 80366,
+        "HTML": 77145,
+        "C++": 43408,
+        "Swift": 41010,
+        "TypeScript": 28131,
+        "CSS": 21508,
+        "CMake": 18549,
+        "JavaScript": 5774
+      },
+      "stars": 0,
+      "forks": 0,
+      "open_issues_and_prs": 0,
+      "size_kib": 25557,
+      "license": null,
+      "releases": [
+        {
+          "tag": "v1.7-beta.29",
+          "url": "https://github.com/soBigRice/soRound_os/releases/tag/v1.7-beta.29",
+          "prerelease": true,
+          "published_at": "2026-10-07T12:12:16Z",
+          "downloads": 1
+        },
+        {
+          "tag": "v1.7-beta.28",
+          "url": "https://github.com/soBigRice/soRound_os/releases/tag/v1.7-beta.28",
+          "prerelease": true,
+          "published_at": "2026-10-07T10:45:55Z",
+          "downloads": 3
+        },
+        {
+          "tag": "v1.7-beta.27",
+          "url": "https://github.com/soBigRice/soRound_os/releases/tag/v1.7-beta.27",
+          "prerelease": true,
+          "published_at": "2026-10-06T06:03:17Z",
+          "downloads": 2
+        },
+        {
+          "tag": "v1.7-beta.26",
+          "url": "https://github.com/soBigRice/soRound_os/releases/tag/v1.7-beta.26",
+          "prerelease": true,
+          "published_at": "2026-10-06T03:49:21Z",
+          "downloads": 1
+        },
+        {
+          "tag": "v1.7-beta.25",
+          "url": "https://github.com/soBigRice/soRound_os/releases/tag/v1.7-beta.25",
+          "prerelease": true,
+          "published_at": "2026-10-05T23:29:06Z",
+          "downloads": 1
+        },
+        {
+          "tag": "v1.7-beta.24",
+          "url": "https://github.com/soBigRice/soRound_os/releases/tag/v1.7-beta.24",
+          "prerelease": true,
+          "published_at": "2026-10-05T14:29:34Z",
+          "downloads": 1
+        },
+        {
+          "tag": "v1.7-beta.23",
+          "url": "https://github.com/soBigRice/soRound_os/releases/tag/v1.7-beta.23",
+          "prerelease": true,
+          "published_at": "2026-10-05T03:45:00Z",
+          "downloads": 1
+        },
+        {
+          "tag": "v1.7-beta.22",
+          "url": "https://github.com/soBigRice/soRound_os/releases/tag/v1.7-beta.22",
+          "prerelease": true,
+          "published_at": "2026-10-05T02:44:54Z",
+          "downloads": 1
+        },
+        {
+          "tag": "v1.7-beta.19",
+          "url": "https://github.com/soBigRice/soRound_os/releases/tag/v1.7-beta.19",
+          "prerelease": true,
+          "published_at": "2026-10-04T16:06:51Z",
+          "downloads": 1
+        },
+        {
+          "tag": "v1.7-beta.18",
+          "url": "https://github.com/soBigRice/soRound_os/releases/tag/v1.7-beta.18",
+          "prerelease": true,
+          "published_at": "2026-10-04T14:24:31Z",
+          "downloads": 1
+        },
+        {
+          "tag": "v1.7-beta.17",
+          "url": "https://github.com/soBigRice/soRound_os/releases/tag/v1.7-beta.17",
+          "prerelease": true,
+          "published_at": "2026-10-04T13:04:04Z",
+          "downloads": 1
+        },
+        {
+          "tag": "v1.7-beta.16",
+          "url": "https://github.com/soBigRice/soRound_os/releases/tag/v1.7-beta.16",
+          "prerelease": true,
+          "published_at": "2026-10-04T10:00:20Z",
+          "downloads": 1
+        },
+        {
+          "tag": "v1.7-beta.15",
+          "url": "https://github.com/soBigRice/soRound_os/releases/tag/v1.7-beta.15",
+          "prerelease": true,
+          "published_at": "2026-10-04T08:50:26Z",
+          "downloads": 1
+        },
+        {
+          "tag": "v1.7-beta.14",
+          "url": "https://github.com/soBigRice/soRound_os/releases/tag/v1.7-beta.14",
+          "prerelease": true,
+          "published_at": "2026-10-04T07:15:07Z",
+          "downloads": 1
+        },
+        {
+          "tag": "v1.7-beta.13",
+          "url": "https://github.com/soBigRice/soRound_os/releases/tag/v1.7-beta.13",
+          "prerelease": true,
+          "published_at": "2026-10-03T16:42:56Z",
+          "downloads": 1
+        },
+        {
+          "tag": "v1.7-beta.11",
+          "url": "https://github.com/soBigRice/soRound_os/releases/tag/v1.7-beta.11",
+          "prerelease": true,
+          "published_at": "2026-10-03T11:23:11Z",
+          "downloads": 1
+        },
+        {
+          "tag": "v1.7-beta.10",
+          "url": "https://github.com/soBigRice/soRound_os/releases/tag/v1.7-beta.10",
+          "prerelease": true,
+          "published_at": "2026-10-02T16:37:49Z",
+          "downloads": 1
+        },
+        {
+          "tag": "v1.7-beta.9",
+          "url": "https://github.com/soBigRice/soRound_os/releases/tag/v1.7-beta.9",
+          "prerelease": true,
+          "published_at": "2026-10-02T04:48:02Z",
+          "downloads": 1
+        },
+        {
+          "tag": "v1.7-beta.8",
+          "url": "https://github.com/soBigRice/soRound_os/releases/tag/v1.7-beta.8",
+          "prerelease": true,
+          "published_at": "2026-10-01T14:32:32Z",
+          "downloads": 1
+        },
+        {
+          "tag": "v1.7-beta.7",
+          "url": "https://github.com/soBigRice/soRound_os/releases/tag/v1.7-beta.7",
+          "prerelease": true,
+          "published_at": "2026-07-19T16:58:58Z",
+          "downloads": 1
+        },
+        {
+          "tag": "v1.7-beta.6",
+          "url": "https://github.com/soBigRice/soRound_os/releases/tag/v1.7-beta.6",
+          "prerelease": true,
+          "published_at": "2026-07-19T15:29:20Z",
+          "downloads": 1
+        },
+        {
+          "tag": "v1.7-beta.5",
+          "url": "https://github.com/soBigRice/soRound_os/releases/tag/v1.7-beta.5",
+          "prerelease": true,
+          "published_at": "2026-07-19T11:51:17Z",
+          "downloads": 0
+        },
+        {
+          "tag": "v1.7-beta.4",
+          "url": "https://github.com/soBigRice/soRound_os/releases/tag/v1.7-beta.4",
+          "prerelease": true,
+          "published_at": "2026-07-19T11:45:28Z",
+          "downloads": 0
+        },
+        {
+          "tag": "v1.7-beta.3",
+          "url": "https://github.com/soBigRice/soRound_os/releases/tag/v1.7-beta.3",
+          "prerelease": true,
+          "published_at": "2026-07-19T11:29:31Z",
+          "downloads": 0
+        },
+        {
+          "tag": "v1.7-beta.2",
+          "url": "https://github.com/soBigRice/soRound_os/releases/tag/v1.7-beta.2",
+          "prerelease": true,
+          "published_at": "2026-07-17T01:08:57Z",
+          "downloads": 0
+        },
+        {
+          "tag": "v1.7-beta.1",
+          "url": "https://github.com/soBigRice/soRound_os/releases/tag/v1.7-beta.1",
+          "prerelease": true,
+          "published_at": "2026-07-16T15:02:19Z",
+          "downloads": 0
+        },
+        {
+          "tag": "v1.6.1",
+          "url": "https://github.com/soBigRice/soRound_os/releases/tag/v1.6.1",
+          "prerelease": false,
+          "published_at": "2026-07-16T14:22:59Z",
+          "downloads": 2
+        },
+        {
+          "tag": "v1.6",
+          "url": "https://github.com/soBigRice/soRound_os/releases/tag/v1.6",
+          "prerelease": false,
+          "published_at": "2026-07-16T14:03:00Z",
+          "downloads": 0
+        },
+        {
+          "tag": "v1.5",
+          "url": "https://github.com/soBigRice/soRound_os/releases/tag/v1.5",
+          "prerelease": false,
+          "published_at": "2026-07-16T07:27:48Z",
+          "downloads": 0
+        },
+        {
+          "tag": "v1.4",
+          "url": "https://github.com/soBigRice/soRound_os/releases/tag/v1.4",
+          "prerelease": false,
+          "published_at": "2026-07-15T17:03:46Z",
+          "downloads": 0
+        },
+        {
+          "tag": "v1.3",
+          "url": "https://github.com/soBigRice/soRound_os/releases/tag/v1.3",
+          "prerelease": false,
+          "published_at": "2026-07-15T16:07:15Z",
+          "downloads": 0
+        },
+        {
+          "tag": "v1.2",
+          "url": "https://github.com/soBigRice/soRound_os/releases/tag/v1.2",
+          "prerelease": false,
+          "published_at": "2026-07-15T15:47:16Z",
+          "downloads": 0
+        },
+        {
+          "tag": "v1.1",
+          "url": "https://github.com/soBigRice/soRound_os/releases/tag/v1.1",
+          "prerelease": false,
+          "published_at": "2026-07-15T15:32:42Z",
+          "downloads": 0
+        },
+        {
+          "tag": "v1.0",
+          "url": "https://github.com/soBigRice/soRound_os/releases/tag/v1.0",
+          "prerelease": false,
+          "published_at": "2026-07-15T14:51:16Z",
+          "downloads": 2
+        }
+      ]
+    },
+    {
+      "name": "soBigRice",
+      "url": "https://github.com/soBigRice/soBigRice",
+      "description": "我的个人博客介绍",
+      "homepage": "",
+      "fork": false,
+      "archived": false,
+      "private": false,
+      "visibility": "public",
+      "pushed_at": "2026-10-07T13:39:55Z",
+      "primary_language": null,
+      "languages": {},
+      "stars": 0,
+      "forks": 0,
+      "open_issues_and_prs": 0,
+      "size_kib": 503,
+      "license": null,
+      "releases": []
+    },
+    {
+      "name": "LynkCo-DiPlay",
+      "url": "https://github.com/soBigRice/LynkCo-DiPlay",
+      "description": "领克OSN版本的carplay兼容",
+      "homepage": "https://soBigRice.github.io/LynkCo-DiPlay/",
+      "fork": true,
+      "archived": false,
+      "private": false,
+      "visibility": "public",
+      "pushed_at": "2026-10-07T12:00:14Z",
+      "primary_language": "Kotlin",
+      "languages": {
+        "Kotlin": 3520741,
+        "HTML": 24104,
+        "C": 11369,
+        "Python": 9454,
+        "Makefile": 528
+      },
+      "stars": 8,
+      "forks": 1,
+      "open_issues_and_prs": 0,
+      "size_kib": 5466,
+      "license": "GPL-3.0",
+      "releases": []
+    },
+    {
+      "name": "port-guardian",
+      "url": "https://github.com/soBigRice/port-guardian",
+      "description": "一个Mac和window上的端口进程管理工具",
+      "homepage": "",
+      "fork": false,
+      "archived": false,
+      "private": false,
+      "visibility": "public",
+      "pushed_at": "2026-07-03T05:05:42Z",
+      "primary_language": "Rust",
+      "languages": {
+        "Rust": 114038,
+        "TypeScript": 83043,
+        "CSS": 20755,
+        "HTML": 365
+      },
+      "stars": 4,
+      "forks": 0,
+      "open_issues_and_prs": 0,
+      "size_kib": 21003,
+      "license": null,
+      "releases": [
+        {
+          "tag": "v0.2.10",
+          "url": "https://github.com/soBigRice/port-guardian/releases/tag/v0.2.10",
+          "prerelease": false,
+          "published_at": "2026-07-03T05:21:05Z",
+          "downloads": 15
+        },
+        {
+          "tag": "v0.2.9",
+          "url": "https://github.com/soBigRice/port-guardian/releases/tag/v0.2.9",
+          "prerelease": false,
+          "published_at": "2026-07-02T10:50:48Z",
+          "downloads": 12
+        },
+        {
+          "tag": "v0.2.8",
+          "url": "https://github.com/soBigRice/port-guardian/releases/tag/v0.2.8",
+          "prerelease": false,
+          "published_at": "2026-07-01T07:13:37Z",
+          "downloads": 16
+        },
+        {
+          "tag": "v0.2.7",
+          "url": "https://github.com/soBigRice/port-guardian/releases/tag/v0.2.7",
+          "prerelease": false,
+          "published_at": "2026-07-01T06:52:45Z",
+          "downloads": 5
+        },
+        {
+          "tag": "v0.2.6",
+          "url": "https://github.com/soBigRice/port-guardian/releases/tag/v0.2.6",
+          "prerelease": false,
+          "published_at": "2026-07-01T02:52:53Z",
+          "downloads": 5
+        },
+        {
+          "tag": "v0.2.2",
+          "url": "https://github.com/soBigRice/port-guardian/releases/tag/v0.2.2",
+          "prerelease": false,
+          "published_at": "2026-06-30T14:12:18Z",
+          "downloads": 0
+        },
+        {
+          "tag": "v0.2.1",
+          "url": "https://github.com/soBigRice/port-guardian/releases/tag/v0.2.1",
+          "prerelease": false,
+          "published_at": "2026-06-30T13:06:41Z",
+          "downloads": 4
+        },
+        {
+          "tag": "v0.2.0",
+          "url": "https://github.com/soBigRice/port-guardian/releases/tag/v0.2.0",
+          "prerelease": false,
+          "published_at": "2026-06-30T10:03:52Z",
+          "downloads": 7
+        },
+        {
+          "tag": "v0.1.13",
+          "url": "https://github.com/soBigRice/port-guardian/releases/tag/v0.1.13",
+          "prerelease": false,
+          "published_at": "2026-06-02T08:06:07Z",
+          "downloads": 42
+        },
+        {
+          "tag": "v0.1.12",
+          "url": "https://github.com/soBigRice/port-guardian/releases/tag/v0.1.12",
+          "prerelease": false,
+          "published_at": "2026-06-02T06:17:25Z",
+          "downloads": 15
+        },
+        {
+          "tag": "v0.1.11",
+          "url": "https://github.com/soBigRice/port-guardian/releases/tag/v0.1.11",
+          "prerelease": false,
+          "published_at": "2026-06-02T05:55:18Z",
+          "downloads": 3
+        },
+        {
+          "tag": "v0.1.10",
+          "url": "https://github.com/soBigRice/port-guardian/releases/tag/v0.1.10",
+          "prerelease": false,
+          "published_at": "2026-06-02T04:33:05Z",
+          "downloads": 9
+        },
+        {
+          "tag": "v0.1.9",
+          "url": "https://github.com/soBigRice/port-guardian/releases/tag/v0.1.9",
+          "prerelease": false,
+          "published_at": "2026-06-02T04:23:15Z",
+          "downloads": 9
+        },
+        {
+          "tag": "v0.1.8",
+          "url": "https://github.com/soBigRice/port-guardian/releases/tag/v0.1.8",
+          "prerelease": false,
+          "published_at": "2026-06-02T04:00:46Z",
+          "downloads": 7
+        }
+      ]
+    },
+    {
+      "name": "three_shader_example",
+      "url": "https://github.com/soBigRice/three_shader_example",
+      "description": "一个vibecoding的threejs的shader案例库",
+      "homepage": "https://sobigrice.github.io/three_shader_example/",
+      "fork": false,
+      "archived": false,
+      "private": false,
+      "visibility": "public",
+      "pushed_at": "2026-05-14T16:14:49Z",
+      "primary_language": "TypeScript",
+      "languages": {
+        "TypeScript": 95862,
+        "GLSL": 23585,
+        "CSS": 4687,
+        "HTML": 574
+      },
+      "stars": 0,
+      "forks": 0,
+      "open_issues_and_prs": 0,
+      "size_kib": 114,
+      "license": null,
+      "releases": []
+    },
+    {
+      "name": "ohBangs",
+      "url": "https://github.com/soBigRice/ohBangs",
+      "description": "mac上的灵动岛",
+      "homepage": "",
+      "fork": false,
+      "archived": false,
+      "private": false,
+      "visibility": "public",
+      "pushed_at": "2026-05-04T04:34:03Z",
+      "primary_language": null,
+      "languages": {},
+      "stars": 0,
+      "forks": 0,
+      "open_issues_and_prs": 0,
+      "size_kib": 1145,
+      "license": "MIT",
+      "releases": []
+    },
+    {
+      "name": "oh-fans",
+      "url": "https://github.com/soBigRice/oh-fans",
+      "description": "我自己做的mac上的一个风扇软件",
+      "homepage": "https://github.com/soBigRice/oh-fans/releases/latest",
+      "fork": false,
+      "archived": false,
+      "private": false,
+      "visibility": "public",
+      "pushed_at": "2026-04-27T05:54:34Z",
+      "primary_language": "Swift",
+      "languages": {
+        "Swift": 242373,
+        "Shell": 9822,
+        "C": 5173,
+        "JavaScript": 2031
+      },
+      "stars": 0,
+      "forks": 0,
+      "open_issues_and_prs": 0,
+      "size_kib": 4508,
+      "license": null,
+      "releases": [
+        {
+          "tag": "v1.0.1",
+          "url": "https://github.com/soBigRice/oh-fans/releases/tag/v1.0.1",
+          "prerelease": false,
+          "published_at": "2026-04-24T01:57:08Z",
+          "downloads": 15
+        },
+        {
+          "tag": "v1.0",
+          "url": "https://github.com/soBigRice/oh-fans/releases/tag/v1.0",
+          "prerelease": false,
+          "published_at": "2026-04-23T09:56:33Z",
+          "downloads": 0
+        }
+      ]
+    },
+    {
+      "name": "-API-",
+      "url": "https://github.com/soBigRice/-API-",
+      "description": "由于某些接口有免费次数也不是实时更新的，所以我开发了这个接口合集，将一些数据临时存储到本地",
+      "homepage": "",
+      "fork": false,
+      "archived": false,
+      "private": false,
+      "visibility": "public",
+      "pushed_at": "2026-03-26T03:22:04Z",
+      "primary_language": "TypeScript",
+      "languages": {
+        "TypeScript": 9950,
+        "JavaScript": 899,
+        "Dockerfile": 509
+      },
+      "stars": 0,
+      "forks": 0,
+      "open_issues_and_prs": 0,
+      "size_kib": 108,
+      "license": null,
+      "releases": []
+    },
+    {
+      "name": "lsky_v2.1_node_server",
+      "url": "https://github.com/soBigRice/lsky_v2.1_node_server",
+      "description": "一个基于兰空图床v2.1开源版本的nodejs服务",
+      "homepage": "",
+      "fork": false,
+      "archived": false,
+      "private": false,
+      "visibility": "public",
+      "pushed_at": "2026-03-23T15:08:35Z",
+      "primary_language": "JavaScript",
+      "languages": {
+        "JavaScript": 23519,
+        "Dockerfile": 461
+      },
+      "stars": 0,
+      "forks": 0,
+      "open_issues_and_prs": 0,
+      "size_kib": 21,
+      "license": "MIT",
+      "releases": []
+    },
+    {
+      "name": "snapshot",
+      "url": "https://github.com/soBigRice/snapshot",
+      "description": "一个简单的射击小游戏",
+      "homepage": "https://sobigrice.github.io/snapshot/",
+      "fork": false,
+      "archived": false,
+      "private": false,
+      "visibility": "public",
+      "pushed_at": "2026-03-06T10:34:13Z",
+      "primary_language": "TypeScript",
+      "languages": {
+        "TypeScript": 40746,
+        "CSS": 10711,
+        "JavaScript": 616,
+        "HTML": 358
+      },
+      "stars": 0,
+      "forks": 0,
+      "open_issues_and_prs": 0,
+      "size_kib": 1385,
+      "license": "MIT",
+      "releases": []
+    },
+    {
+      "name": "WebGL_heart_beat",
+      "url": "https://github.com/soBigRice/WebGL_heart_beat",
+      "description": "webGL心跳模版",
+      "homepage": "https://sobigrice.github.io/WebGL_heart_beat/",
+      "fork": false,
+      "archived": false,
+      "private": false,
+      "visibility": "public",
+      "pushed_at": "2026-03-06T01:51:19Z",
+      "primary_language": "Vue",
+      "languages": {
+        "Vue": 59261,
+        "TypeScript": 32950,
+        "GLSL": 3549,
+        "CSS": 765,
+        "HTML": 357
+      },
+      "stars": 0,
+      "forks": 0,
+      "open_issues_and_prs": 0,
+      "size_kib": 648,
+      "license": null,
+      "releases": [
+        {
+          "tag": "v1.0.0",
+          "url": "https://github.com/soBigRice/WebGL_heart_beat/releases/tag/v1.0.0",
+          "prerelease": false,
+          "published_at": "2026-03-05T16:40:53Z",
+          "downloads": 0
+        }
+      ]
+    },
+    {
+      "name": "wifiCalendar",
+      "url": "https://github.com/soBigRice/wifiCalendar",
+      "description": "一个用ESP32+墨水屏开发的智能wifi日历",
+      "homepage": "",
+      "fork": false,
+      "archived": false,
+      "private": false,
+      "visibility": "public",
+      "pushed_at": "2026-03-02T13:46:16Z",
+      "primary_language": "C",
+      "languages": {
+        "C": 81948,
+        "C++": 64360
+      },
+      "stars": 0,
+      "forks": 0,
+      "open_issues_and_prs": 0,
+      "size_kib": 3791,
+      "license": null,
+      "releases": []
+    },
+    {
+      "name": "graphical.top",
+      "url": "https://github.com/soBigRice/graphical.top",
+      "description": "graphical.top的内容补充",
+      "homepage": "",
+      "fork": false,
+      "archived": false,
+      "private": false,
+      "visibility": "public",
+      "pushed_at": "2026-02-14T07:34:27Z",
+      "primary_language": "Vue",
+      "languages": {
+        "Vue": 7149,
+        "CSS": 1158,
+        "HTML": 362,
+        "TypeScript": 266
+      },
+      "stars": 0,
+      "forks": 0,
+      "open_issues_and_prs": 0,
+      "size_kib": 14372,
+      "license": null,
+      "releases": []
+    },
+    {
+      "name": "github_action_server",
+      "url": "https://github.com/soBigRice/github_action_server",
+      "description": "一个github的action服务",
+      "homepage": "",
+      "fork": false,
+      "archived": false,
+      "private": false,
+      "visibility": "public",
+      "pushed_at": "2026-02-14T06:58:50Z",
+      "primary_language": "JavaScript",
+      "languages": {
+        "JavaScript": 2696
+      },
+      "stars": 0,
+      "forks": 0,
+      "open_issues_and_prs": 0,
+      "size_kib": 12,
+      "license": null,
+      "releases": []
+    },
+    {
+      "name": "Hello-WebGPU",
+      "url": "https://github.com/soBigRice/Hello-WebGPU",
+      "description": "一个webGPU的欢迎页面，用了WGSL的shader",
+      "homepage": "",
+      "fork": false,
+      "archived": false,
+      "private": false,
+      "visibility": "public",
+      "pushed_at": "2026-01-29T06:12:16Z",
+      "primary_language": "JavaScript",
+      "languages": {
+        "JavaScript": 6996,
+        "HTML": 648,
+        "CSS": 227
+      },
+      "stars": 0,
+      "forks": 0,
+      "open_issues_and_prs": 0,
+      "size_kib": 124,
+      "license": null,
+      "releases": []
+    },
+    {
+      "name": "NodeMessage",
+      "url": "https://github.com/soBigRice/NodeMessage",
+      "description": "一个用nodejs写的消息通知服务，通知到邮件",
+      "homepage": "",
+      "fork": false,
+      "archived": false,
+      "private": false,
+      "visibility": "public",
+      "pushed_at": "2025-07-09T05:46:41Z",
+      "primary_language": "JavaScript",
+      "languages": {
+        "JavaScript": 14945,
+        "Shell": 1459,
+        "Dockerfile": 648
+      },
+      "stars": 0,
+      "forks": 0,
+      "open_issues_and_prs": 0,
+      "size_kib": 38,
+      "license": "ISC",
+      "releases": []
+    },
+    {
+      "name": "Cesium.path",
+      "url": "https://github.com/soBigRice/Cesium.path",
+      "description": "",
+      "homepage": "",
+      "fork": false,
+      "archived": false,
+      "private": false,
+      "visibility": "public",
+      "pushed_at": "2025-05-12T08:33:16Z",
+      "primary_language": "JavaScript",
+      "languages": {
+        "JavaScript": 4128510,
+        "CSS": 78307,
+        "HTML": 36955,
+        "TypeScript": 21207
+      },
+      "stars": 0,
+      "forks": 1,
+      "open_issues_and_prs": 0,
+      "size_kib": 7430,
+      "license": "MIT",
+      "releases": []
+    },
+    {
+      "name": "fpsActor",
+      "url": "https://github.com/soBigRice/fpsActor",
+      "description": "",
+      "homepage": "https://sobigrice.github.io/fpsActor/",
+      "fork": false,
+      "archived": false,
+      "private": false,
+      "visibility": "public",
+      "pushed_at": "2025-05-10T07:59:20Z",
+      "primary_language": "TypeScript",
+      "languages": {
+        "TypeScript": 26879,
+        "CSS": 1523,
+        "HTML": 425
+      },
+      "stars": 0,
+      "forks": 0,
+      "open_issues_and_prs": 0,
+      "size_kib": 180,
+      "license": null,
+      "releases": []
+    },
+    {
+      "name": "three.path",
+      "url": "https://github.com/soBigRice/three.path",
+      "description": "three.path is a three.js extension which provides a 3D path geometry builder.",
+      "homepage": "",
+      "fork": true,
+      "archived": false,
+      "private": false,
+      "visibility": "public",
+      "pushed_at": "2024-12-04T01:56:38Z",
+      "primary_language": "JavaScript",
+      "languages": {
+        "JavaScript": 109272
+      },
+      "stars": 0,
+      "forks": 0,
+      "open_issues_and_prs": 0,
+      "size_kib": 2164,
+      "license": "MIT",
+      "releases": []
+    },
+    {
+      "name": "old_github_io",
+      "url": "https://github.com/soBigRice/old_github_io",
+      "description": "一个妄图集大成者的工具库。加油吧，努力搬砖",
+      "homepage": "",
+      "fork": false,
+      "archived": false,
+      "private": false,
+      "visibility": "public",
+      "pushed_at": "2024-11-14T04:35:13Z",
+      "primary_language": "HTML",
+      "languages": {
+        "HTML": 13860,
+        "JavaScript": 10842,
+        "CSS": 219
+      },
+      "stars": 0,
+      "forks": 1,
+      "open_issues_and_prs": 0,
+      "size_kib": 97141,
+      "license": "MIT",
+      "releases": []
+    },
+    {
+      "name": "ar_view",
+      "url": "https://github.com/soBigRice/ar_view",
+      "description": "a sample demo for show WebAR by Three.js",
+      "homepage": "https://ar-view.vercel.app",
+      "fork": false,
+      "archived": false,
+      "private": false,
+      "visibility": "public",
+      "pushed_at": "2024-11-13T05:49:36Z",
+      "primary_language": "JavaScript",
+      "languages": {
+        "JavaScript": 4529,
+        "HTML": 941,
+        "CSS": 73
+      },
+      "stars": 0,
+      "forks": 0,
+      "open_issues_and_prs": 0,
+      "size_kib": 75200,
+      "license": null,
+      "releases": []
+    },
+    {
+      "name": "AR.js",
+      "url": "https://github.com/soBigRice/AR.js",
+      "description": "Image tracking, Location Based AR, Marker tracking. All on the Web.",
+      "homepage": "",
+      "fork": true,
+      "archived": false,
+      "private": false,
+      "visibility": "public",
+      "pushed_at": "2024-11-13T01:25:27Z",
+      "primary_language": "JavaScript",
+      "languages": {
+        "JavaScript": 363555,
+        "HTML": 243758,
+        "Brainfuck": 12484,
+        "C": 12484,
+        "D": 12484,
+        "Filebench WML": 12484,
+        "G-code": 12484,
+        "CSS": 1792,
+        "TypeScript": 1539,
+        "Makefile": 1004,
+        "Shell": 58
+      },
+      "stars": 0,
+      "forks": 0,
+      "open_issues_and_prs": 0,
+      "size_kib": 234446,
+      "license": "MIT",
+      "releases": []
+    },
+    {
+      "name": "load-bmfont",
+      "url": "https://github.com/soBigRice/load-bmfont",
+      "description": "loads a BMFont file in Node and the browser",
+      "homepage": "",
+      "fork": true,
+      "archived": false,
+      "private": false,
+      "visibility": "public",
+      "pushed_at": "2024-10-31T02:02:28Z",
+      "primary_language": null,
+      "languages": {
+        "JavaScript": 6365
+      },
+      "stars": 0,
+      "forks": 0,
+      "open_issues_and_prs": 0,
+      "size_kib": 226,
+      "license": "MIT",
+      "releases": []
+    },
+    {
+      "name": "npm-library-universal-template",
+      "url": "https://github.com/soBigRice/npm-library-universal-template",
+      "description": "",
+      "homepage": "",
+      "fork": false,
+      "archived": false,
+      "private": false,
+      "visibility": "public",
+      "pushed_at": "2024-06-05T08:30:36Z",
+      "primary_language": "TypeScript",
+      "languages": {
+        "TypeScript": 3475,
+        "HTML": 778,
+        "JavaScript": 695
+      },
+      "stars": 0,
+      "forks": 0,
+      "open_issues_and_prs": 0,
+      "size_kib": 16,
+      "license": "MIT",
+      "releases": []
+    },
+    {
+      "name": "aliyundrive-checkin",
+      "url": "https://github.com/soBigRice/aliyundrive-checkin",
+      "description": "阿里云盘自动签到程序",
+      "homepage": "",
+      "fork": true,
+      "archived": false,
+      "private": false,
+      "visibility": "public",
+      "pushed_at": "2024-04-07T14:30:03Z",
+      "primary_language": null,
+      "languages": {
+        "Python": 15545
+      },
+      "stars": 0,
+      "forks": 0,
+      "open_issues_and_prs": 0,
+      "size_kib": 52,
+      "license": null,
+      "releases": []
+    },
+    {
+      "name": "extend_three.js",
+      "url": "https://github.com/soBigRice/extend_three.js",
+      "description": "JavaScript 3D Library.",
+      "homepage": "https://threejs.org/",
+      "fork": true,
+      "archived": false,
+      "private": false,
+      "visibility": "public",
+      "pushed_at": "2023-08-10T13:47:37Z",
+      "primary_language": null,
+      "languages": {
+        "JavaScript": 8135127,
+        "HTML": 6618756,
+        "Roff": 478172,
+        "SCSS": 455657,
+        "CSS": 250761
+      },
+      "stars": 0,
+      "forks": 0,
+      "open_issues_and_prs": 0,
+      "size_kib": 1256573,
+      "license": "MIT",
+      "releases": []
+    },
+    {
+      "name": "guigui267.github.io",
+      "url": "https://github.com/soBigRice/guigui267.github.io",
+      "description": "本人的第一个github网站测试用",
+      "homepage": "",
+      "fork": false,
+      "archived": false,
+      "private": false,
+      "visibility": "public",
+      "pushed_at": "2023-02-22T09:20:03Z",
+      "primary_language": "HTML",
+      "languages": {
+        "HTML": 1269922,
+        "CSS": 8825,
+        "JavaScript": 585,
+        "Batchfile": 293
+      },
+      "stars": 0,
+      "forks": 0,
+      "open_issues_and_prs": 0,
+      "size_kib": 840595,
+      "license": null,
+      "releases": []
+    },
+    {
+      "name": "lodash-utils",
+      "url": "https://github.com/soBigRice/lodash-utils",
+      "description": "基于 evil.js 优化，引入之后, 可以当作 lodash 使用，然后在特定条件下产生一些错误。",
+      "homepage": "",
+      "fork": true,
+      "archived": false,
+      "private": false,
+      "visibility": "public",
+      "pushed_at": "2022-08-25T01:08:18Z",
+      "primary_language": null,
+      "languages": {
+        "JavaScript": 4398
+      },
+      "stars": 0,
+      "forks": 0,
+      "open_issues_and_prs": 0,
+      "size_kib": 236,
+      "license": "MIT",
+      "releases": []
+    },
+    {
+      "name": "three-bmfont-text",
+      "url": "https://github.com/soBigRice/three-bmfont-text",
+      "description": "renders BMFont files in ThreeJS with word-wrapping",
+      "homepage": "http://jam3.github.io/three-bmfont-text/test/",
+      "fork": true,
+      "archived": false,
+      "private": false,
+      "visibility": "public",
+      "pushed_at": "2022-07-25T15:54:00Z",
+      "primary_language": null,
+      "languages": {
+        "JavaScript": 45805,
+        "GLSL": 1081,
+        "HTML": 276
+      },
+      "stars": 0,
+      "forks": 0,
+      "open_issues_and_prs": 0,
+      "size_kib": 983,
+      "license": "MIT",
+      "releases": []
+    },
+    {
+      "name": "metaverse",
+      "url": "https://github.com/soBigRice/metaverse",
+      "description": "metaverse",
+      "homepage": "",
+      "fork": true,
+      "archived": false,
+      "private": false,
+      "visibility": "public",
+      "pushed_at": "2021-12-17T09:18:26Z",
+      "primary_language": null,
+      "languages": {
+        "TypeScript": 29246,
+        "JavaScript": 1426,
+        "HTML": 989,
+        "CSS": 181
+      },
+      "stars": 0,
+      "forks": 0,
+      "open_issues_and_prs": 0,
+      "size_kib": 4125,
+      "license": null,
+      "releases": []
+    },
+    {
+      "name": "3Ddemo",
+      "url": "https://github.com/soBigRice/3Ddemo",
+      "description": "一个简单的3D网页，基于Three封装，把场景等元素直接封装了，直接调用就好了",
+      "homepage": "",
+      "fork": false,
+      "archived": false,
+      "private": false,
+      "visibility": "public",
+      "pushed_at": "2021-11-18T02:48:28Z",
+      "primary_language": "JavaScript",
+      "languages": {
+        "JavaScript": 10586,
+        "HTML": 463
+      },
+      "stars": 0,
+      "forks": 0,
+      "open_issues_and_prs": 0,
+      "size_kib": 44,
+      "license": null,
+      "releases": []
+    },
+    {
+      "name": "Graduation-project-WebXR",
+      "url": "https://github.com/soBigRice/Graduation-project-WebXR",
+      "description": "",
+      "homepage": "",
+      "fork": false,
+      "archived": false,
+      "private": false,
+      "visibility": "public",
+      "pushed_at": "2021-05-14T09:07:24Z",
+      "primary_language": "JavaScript",
+      "languages": {
+        "JavaScript": 1350848,
+        "CSS": 8025,
+        "HTML": 1214
+      },
+      "stars": 0,
+      "forks": 0,
+      "open_issues_and_prs": 0,
+      "size_kib": 317542,
+      "license": null,
+      "releases": []
+    }
+  ],
+  "summary": {
+    "public_repos": 32,
+    "original_repos": 23,
+    "fork_repos": 9,
+    "stars": 12,
+    "forks_received": 3,
+    "release_count": 51,
+    "downloads": 192,
+    "languages": {
+      "C": 13020039,
+      "JavaScript": 5564071,
+      "HTML": 1404367,
+      "TypeScript": 342509,
+      "Swift": 283383,
+      "CSS": 156783,
+      "Rust": 114038,
+      "C++": 107768,
+      "Python": 80366,
+      "Vue": 66410,
+      "GLSL": 27134,
+      "CMake": 18549,
+      "Shell": 11281,
+      "Dockerfile": 1618,
+      "Batchfile": 293
+    },
+    "language_repos": {
+      "C": 3,
+      "Python": 1,
+      "HTML": 15,
+      "C++": 2,
+      "Swift": 2,
+      "TypeScript": 10,
+      "CSS": 13,
+      "CMake": 1,
+      "JavaScript": 15,
+      "Rust": 1,
+      "GLSL": 2,
+      "Shell": 2,
+      "Dockerfile": 3,
+      "Vue": 2,
+      "Batchfile": 1
+    }
+  }
+}

@@ -1,6 +1,65 @@
 # GitHub Profile 设计与维护记录
 
-## 当前版本 · 2026-10-07
+## 当前版本 · 2026-10-07 第二版
+
+状态：按用户在实际 GitHub 页面的反馈继续改版；发布用于审阅，整体视觉仍待用户验收。第一版与 7 月记录仅为历史，旧的“四项目上限、统计折叠、取消语言卡”已被本次明确需求替代。
+
+### 当前需求与边界
+
+用户明确反馈：“不够酷炫，以及统计的内容不多啊，能显示的信息，以及数据表格都展示出来。”本版采用黑红霓虹喵总横幅、动态贡献图与主题自适应数据面板，账号、语言、全部公开仓库、版本和下载表默认展开。
+
+- 展示 32 个公开仓库：23 个非 Fork 仓库、9 个 Fork；保留 soRound OS、领克适配的真实项目展板与上游署名。
+- 只处理 Profile 仓库；账号头像、简介、置顶仓库不在本次范围。使用 GitHub 原生 Markdown / picture / SVG，无前端依赖或新增定时工作流。
+- 私有项目、草稿 Release、Release 正文、邮件和凭证不进入快照。语言分布排除 Fork，但原仓库内仍可能有第三方代码，不能视为本人逐行贡献量。
+
+### 展示与维护链路
+
+`README.md` → 霓虹主视觉 → 八项公开指标 → 账号表 / 贡献趋势 / 贡献统计 / UTC+8 提交时段 → 两个最新项目展板 → 提交语言图 / 完整语言表 / 技术栈 → 23 个非 Fork 仓库表 → 9 个 Fork 表 → Release 与下载表 → 原有贡献小蛇。
+
+`scripts/refresh_profile.py:collect()` → GitHub 公开账号与 owner 仓库 API → 每仓库 languages / releases 分页 → 排除草稿并按 published_at 排序 → `summarize()` → `assets/profile-data.json` → `render()` → `PROFILE:*` 标记内的六块 README 表格与两张 profile-signals SVG。
+
+刷新方式（Python 标准库 + 已有 GitHub CLI，无安装项）：
+
+```sh
+PYTHONDONTWRITEBYTECODE=1 python3 scripts/refresh_profile.py
+PYTHONDONTWRITEBYTECODE=1 python3 scripts/refresh_profile.py --from-snapshot assets/profile-data.json
+PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -v
+```
+
+脚本只更新本地文件，不提交、不推送。所有 API 采集成功、公开性与 README 标记检查通过后才开始写文件；失败报错退出，不用空数据覆盖主页。快照需手动刷新；第三方贡献卡通过服务缓存动态更新。日期为 UTC+8，API open_issues_count 同时包含开放 Issue 与 PR，README 按此标注。
+
+### 统计真源与取舍（2026-10-07）
+
+- 本次 [GitHub REST 公开仓库](https://docs.github.com/en/rest/repos/repos#list-repositories-for-a-user)、[语言字节](https://docs.github.com/en/rest/repos/repos#list-repository-languages) 与 [Release](https://docs.github.com/en/rest/releases/releases#list-releases) 数据：32 仓库、12 Stars、3 次被 Fork、15 种非 Fork 仓库语言、51 个公开 Release、192 次 GitHub 附件下载。下载不含 OTA、镜像、npm，不能当作设备量。
+- 贡献卡使用 MIT 许可的 [GitHub Profile Summary Cards](https://github.com/vn7n24fzkq/github-profile-summary-cards)：profile-details / stats / most-commit-language / productive-time。官方支持自定义颜色和 SVG CSS draw 动画。本次四类卡片的深浅主题共八个 URL 均返回 200 与有效 SVG；UTC 偏移设为 8，动画 2 秒。
+- 动态卡的仓库与 Stars 排除 Fork（因此卡片 Stars 为 4，快照含领克适配等 Fork 为 12）；贡献次数、Commit、PR、Issue 各有范围，不能直接相加。保留原始图表标签，不编造跨指标的总数。
+- 原 activity-graph 端点返回 402、常见 streak 端点返回 403，因此替换；经典 github-readme-stats 原仓库目前标记未维护，因此没有继续增加依赖。动态卡有第三方可用性与缓存成本；基础表格和八项面板保留可维护的公开数据快照。
+- 小蛇继续引用现有 output 分支，本次没有调整其生成流程；核对的分支更新日期为 2026-10-07。
+
+### 主视觉与源图
+
+新增 `assets/profile-masthead-v2.webp`，2117×743，约 289 KiB。内置 imagegen 参考现有喵总品牌原图生成，仅转换 WebP 编码，不裁切或替换原件；两版横幅及 `assets/miaozong-profile-hero.webp` 均保留。项目截图沿用第一版真实公开素材。
+
+最终提示词：
+
+> Use case: identity-preserve. Asset type: final wide GitHub developer profile masthead, target landscape 2240 x 700, 3.2:1. The supplied photograph is the existing personal brand's cat CEO. Keep the same photorealistic silver cat identity, black baseball cap and black sunglasses, confidently occupying the right 45%. Upgrade the static quiet studio scene into a cool premium cyber engineering lab: rich black and deep violet background, thin vivid crimson laser arcs orbiting behind the cat, restrained electric cyan edge reflections, translucent spectral ribbons, pin-point stars and luminous geometric engineering lines. Make it striking and sophisticated, not cartoonish, not a generic gaming template. Sharp realistic fur, tactile dark fabric, cinematic contrast, crisp clean 3D depth. Large perfectly legible single-line white typographic name on the left exactly 'soBigRice.' with a small vivid red final period, mixed case exactly s o B i g R i c e. Above in clear tracked monospace capitals exactly 'INDEPENDENT DEVELOPER'. Below large name exactly 'CODE. CREATE. REPEAT.' in medium sans-serif. At bottom-left exactly 'WEB / DESKTOP / HARDWARE'. Design each line with generous spacing and inset margins. Text occupies left 52% without crossing cat face. Name large enough to read on mobile; body type also sharp. Preserve the cat's personality. No diagrams of metrics, no fabricated numbers, no small UI cards, no terminal, no extra slogans, no watermarks or browser frame. New visual should feel noticeably more energetic and futuristic while retaining the current black/red brand and cat identity.
+
+### 验证与当前状态
+
+- 五项单元检查通过：Fork 统计范围、拒绝非公开数据、排除草稿且按发布日期排序、表格文案转义、标记缺失时不覆盖现有文件。
+- GitHub Markdown API 最终渲染成功：8 组 picture、9 张图片、6 张表格、64 行数据，无 details。本地 SVG XML、无脚本检查及素材引用检查通过。
+- 浏览器实际检查深浅桌面 1280×900 与手机 390×844：9 张图片加载成功，页面无横向溢出；手机项目与 Release 宽表在表内横向滚动。动态图进入视口后完成 draw 动画，正文与图表可读。
+- 完整项目表使用 7 列，把方向与说明、Stars / Forks / 开放 Issue/PR 合并到同格，保留全部数据并减少窄列造成的竖排。
+- 预览内容来自最终 GitHub Markdown API，动态图片取自本轮已验证的服务响应；外层模拟 GitHub，不能视作实际 GitHub 外层账号布局验收。截图和自包含预览留在本任务可视化目录，未加入仓库；测试页、尺寸覆盖和本地服务器在检查后关闭。
+- 发布授权沿用本任务“提交更新一下我看看”的要求，视觉审阅仍以用户反馈为准。由于 github.com 的 Git HTTPS 连接在本机超时，使用已认证 gh 调用官方 Git database API，逐一核对 blob / tree / commit 与本地对象 SHA，再以 force=false 快进主分支；没有关闭 TLS 或重写历史。
+
+### 本次纠正与复用约束
+
+之前默认以压缩信息与折叠统计表现“高级”，没有满足用户对酷炫、丰富公开数据的当前要求。本版按明确反馈展开全部表格，并通过统一配色、标题层次和独立统计口径保持直观。后续不要把早期克制方案当作永久偏好，也不要用减少指标代替信息组织；新增统计先查原始数据和服务状态，注明 Fork、字节、贡献、下载的不同范围。
+
+---
+
+## 2026-10-07 第一版 · 历史
 
 状态：实现与自动检查完成。用户已要求提交并更新 GitHub，以便在实际主页审阅；本轮按此授权提交与推送，整体视觉效果仍待用户确认。下方 2026-07-14 记录为历史，不作为当前布局与项目排序的约束。
 
