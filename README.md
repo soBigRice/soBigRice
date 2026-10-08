@@ -41,14 +41,16 @@
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=soBigRice&amp;theme=github&amp;animation=draw&amp;duration=2&amp;utcOffset=8&amp;bg_color=f4f7fb&amp;title_color=ab1746&amp;text_color=26324b&amp;border_color=dde3ed&amp;icon_color=007c82&amp;chart_color=ab1746" alt="近一年 GitHub 贡献趋势；卡片的仓库数量不含 Fork。" width="900" />
 </picture>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=soBigRice&amp;theme=radical&amp;animation=draw&amp;duration=2&amp;utcOffset=8&amp;bg_color=111018&amp;title_color=ff537c&amp;text_color=dae1ef&amp;border_color=30263f&amp;icon_color=48ead3&amp;chart_color=ff537c" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=soBigRice&amp;theme=github&amp;animation=draw&amp;duration=2&amp;utcOffset=8&amp;bg_color=f4f7fb&amp;title_color=ab1746&amp;text_color=26324b&amp;border_color=dde3ed&amp;icon_color=007c82&amp;chart_color=ab1746" alt="GitHub 公开贡献统计：原创仓库 Stars、Commits、PR、Issue 和参与仓库。" width="430" />
-</picture>
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=soBigRice&amp;theme=radical&amp;animation=draw&amp;duration=2&amp;utcOffset=8&amp;bg_color=111018&amp;title_color=ff537c&amp;text_color=dae1ef&amp;border_color=30263f&amp;icon_color=48ead3&amp;chart_color=ff537c" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=soBigRice&amp;theme=github&amp;animation=draw&amp;duration=2&amp;utcOffset=8&amp;bg_color=f4f7fb&amp;title_color=ab1746&amp;text_color=26324b&amp;border_color=dde3ed&amp;icon_color=007c82&amp;chart_color=ab1746" alt="按 UTC+8 展示的公开提交时段分布。" width="430" />
-</picture>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=soBigRice&amp;theme=radical&amp;animation=draw&amp;duration=2&amp;utcOffset=8&amp;bg_color=111018&amp;title_color=ff537c&amp;text_color=dae1ef&amp;border_color=30263f&amp;icon_color=48ead3&amp;chart_color=ff537c" />
+    <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=soBigRice&amp;theme=github&amp;animation=draw&amp;duration=2&amp;utcOffset=8&amp;bg_color=f4f7fb&amp;title_color=ab1746&amp;text_color=26324b&amp;border_color=dde3ed&amp;icon_color=007c82&amp;chart_color=ab1746" alt="GitHub 公开贡献统计：原创仓库 Stars、Commits、PR、Issue 和参与仓库。" width="400" />
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=soBigRice&amp;theme=radical&amp;animation=draw&amp;duration=2&amp;utcOffset=8&amp;bg_color=111018&amp;title_color=ff537c&amp;text_color=dae1ef&amp;border_color=30263f&amp;icon_color=48ead3&amp;chart_color=ff537c" />
+    <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=soBigRice&amp;theme=github&amp;animation=draw&amp;duration=2&amp;utcOffset=8&amp;bg_color=f4f7fb&amp;title_color=ab1746&amp;text_color=26324b&amp;border_color=dde3ed&amp;icon_color=007c82&amp;chart_color=ab1746" alt="按 UTC+8 展示的公开提交时段分布。" width="400" />
+  </picture>
+</p>
 
 <sub>动态卡片由 GitHub Profile Summary Cards 生成，使用公开可见数据与服务缓存。卡片的仓库数 / Stars 排除 Fork；上方 API 快照包含 Fork。Commit、PR、Issue 与贡献次数是不同指标，不能直接相加。</sub>
 
