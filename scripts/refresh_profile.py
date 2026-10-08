@@ -14,6 +14,7 @@ from urllib.parse import quote
 
 
 ROOT = Path(__file__).resolve().parents[1]
+EN_COPY = json.loads((ROOT / "scripts/profile_copy.en.json").read_text())
 CATEGORIES = {
     "soBigRice": "个人主页", "soRound_os": "嵌入式系统", "port-guardian": "桌面工具",
     "three_shader_example": "图形实验", "ohBangs": "桌面交互", "oh-fans": "桌面工具",
@@ -120,20 +121,34 @@ def pushed_day(value):
     return datetime.fromisoformat(value.replace("Z", "+00:00")).astimezone(timezone(timedelta(hours=8))).date().isoformat()
 
 
-def blocks(data):
+def localized(value, locale):
+    if locale not in ("zh", "en"):
+        raise ValueError(f"Unsupported profile language: {locale}")
+    return EN_COPY["labels"].get(value, value) if locale == "en" else value
+
+
+def description(value, locale):
+    # Match the source copy, so an upstream edit cannot retain a stale translation.
+    return EN_COPY["descriptions"].get(value, value) if locale == "en" else value
+
+
+def blocks(data, locale="zh"):
+    def text(value):
+        return localized(value, locale)
+
     user, summary, repos = data["user"], data["summary"], data["repositories"]
-    account = table(["指标", "数据", "范围"], [
-        ["公开仓库", str(summary["public_repos"]), f"原创 {summary['original_repos']} / Fork {summary['fork_repos']}"],
-        ["获得的 Stars / Forks", f"{summary['stars']} / {summary['forks_received']}", "本人名下全部公开仓库，含适配 Fork"],
-        ["关注者 / 正在关注", f"{user['followers']} / {user['following']}", "GitHub 公开账号数据"],
-        ["公开 Gists", str(user["public_gists"]), "公开代码片段"],
-        ["加入 GitHub", user["created_at"][:10], "账号创建日期"],
-        ["原创仓库语言种类", str(len(summary["languages"])), "GitHub Linguist 检测结果，排除 Fork"],
-        ["公开 Releases", str(summary["release_count"]), "含预发布，排除草稿"],
-        ["Release 附件下载", f"{summary['downloads']:,}", "仅 GitHub 下载次数，不含 OTA / 镜像 / npm"],
+    account = table(list(map(text, ["指标", "数据", "范围"])), [
+        [text("公开仓库"), str(summary["public_repos"]), f"{text('原创')} {summary['original_repos']} / Fork {summary['fork_repos']}"],
+        [text("获得的 Stars / Forks"), f"{summary['stars']} / {summary['forks_received']}", text("本人名下全部公开仓库，含适配 Fork")],
+        [text("关注者 / 正在关注"), f"{user['followers']} / {user['following']}", text("GitHub 公开账号数据")],
+        [text("公开 Gists"), str(user["public_gists"]), text("公开代码片段")],
+        [text("加入 GitHub"), user["created_at"][:10], text("账号创建日期")],
+        [text("原创仓库语言种类"), str(len(summary["languages"])), text("GitHub Linguist 检测结果，排除 Fork")],
+        [text("公开 Releases"), str(summary["release_count"]), text("含预发布，排除草稿")],
+        [text("Release 附件下载"), f"{summary['downloads']:,}", text("仅 GitHub 下载次数，不含 OTA / 镜像 / npm")],
     ])
     total = sum(summary["languages"].values())
-    language = table(["语言", "代码字节", "占比", "涉及原创仓库"], [
+    language = table(list(map(text, ["语言", "代码字节", "占比", "涉及原创仓库"])), [
         [cell(name), f"{count:,}", f"{count / total * 100:.2f}%", str(summary["language_repos"][name])]
         for name, count in summary["languages"].items()
     ])
@@ -143,17 +158,17 @@ def blocks(data):
         for r in repos:
             if r["fork"] != fork:
                 continue
-            language_name = " / ".join(sorted(r["languages"], key=r["languages"].get, reverse=True)[:3]) or "未识别"
-            kind = "领克适配" if r["name"] == "LynkCo-DiPlay" else ("Fork" if fork else CATEGORIES.get(r["name"], "其他"))
-            entry = [link("源码", r["url"])]
+            language_name = " / ".join(sorted(r["languages"], key=r["languages"].get, reverse=True)[:3]) or text("未识别")
+            kind = text("领克适配" if r["name"] == "LynkCo-DiPlay" else ("Fork" if fork else CATEGORIES.get(r["name"], "其他")))
+            entry = [link(text("源码"), r["url"])]
             if r["homepage"] and r["homepage"].startswith(("https://", "http://")):
-                entry.append(link("访问", r["homepage"]))
+                entry.append(link(text("访问"), r["homepage"]))
             if r["releases"]:
-                entry.append(link("发布", r["url"] + "/releases"))
-            rows.append([link(r["name"], r["url"]), f"**{kind}**<br>{cell(r['description'] or '—')}",
+                entry.append(link(text("发布"), r["url"] + "/releases"))
+            rows.append([link(r["name"], r["url"]), f"**{kind}**<br>{cell(description(r['description'] or '—', locale))}",
                          cell(language_name), f"★ {r['stars']}<br>⑂ {r['forks']}<br>Open {r['open_issues_and_prs']}",
-                         pushed_day(r["pushed_at"]), cell(r["license"] or "未识别"), " · ".join(entry)])
-        catalog[key] = table(["项目", "方向与说明", "主要语言", "数据", "最近推送", "许可", "入口"], rows)
+                         pushed_day(r["pushed_at"]), cell(r["license"] or text("未识别")), " · ".join(entry)])
+        catalog[key] = table(list(map(text, ["项目", "方向与说明", "主要语言", "数据", "最近推送", "许可", "入口"])), rows)
     releases = []
     for r in repos:
         if not r["releases"]:
@@ -161,12 +176,12 @@ def blocks(data):
         stable = next((x for x in r["releases"] if not x["prerelease"]), None)
         latest = r["releases"][0]
         releases.append([link(r["name"], r["url"]), link(stable["tag"], stable["url"]) if stable else "—",
-                         link(latest["tag"], latest["url"]) + (" · 预发布" if latest["prerelease"] else ""),
+                         link(latest["tag"], latest["url"]) + (text(" · 预发布") if latest["prerelease"] else ""),
                          str(len(r["releases"])), f"{sum(x['downloads'] for x in r['releases']):,}",
                          pushed_day(latest["published_at"])])
     return {"account": account, "languages": language, **catalog,
-            "releases": table(["项目", "最近正式版", "最近发布", "Release 数", "附件总下载", "最近发布日期"], releases),
-            "snapshot": f"数据快照：**{data['snapshot_date']}** · 仅公开资料 · 日期按 UTC+8。图表与表格的统计范围分别在下方注明。"}
+            "releases": table(list(map(text, ["项目", "最近正式版", "最近发布", "Release 数", "附件总下载", "最近发布日期"])), releases),
+            "snapshot": text("数据快照：**{date}** · 仅公开资料 · 日期按 UTC+8。图表与表格的统计范围分别在下方注明。").format(date=data["snapshot_date"])}
 
 
 def dashboard(data, dark):
@@ -199,14 +214,15 @@ def dashboard(data, dark):
 def render(data):
     # Validate every generated section before changing any local output.
     data["summary"] = summarize(data)
-    readme = (ROOT / "README.md").read_text()
-    for name, value in blocks(data).items():
-        pattern = rf"(<!-- PROFILE:{name}:START -->).*?(<!-- PROFILE:{name}:END -->)"
-        readme, count = re.subn(pattern, lambda m: m[1] + "\n" + value + "\n" + m[2], readme, flags=re.S)
-        if count != 1:
-            raise ValueError(f"Expected one README block: {name}")
-    outputs = {ROOT / "README.md": readme,
-               ROOT / "assets/profile-data.json": json.dumps(data, ensure_ascii=False, indent=2) + "\n"}
+    outputs = {ROOT / "assets/profile-data.json": json.dumps(data, ensure_ascii=False, indent=2) + "\n"}
+    for filename, locale in (("README.md", "zh"), ("README.en.md", "en")):
+        readme = (ROOT / filename).read_text()
+        for name, value in blocks(data, locale).items():
+            pattern = rf"(<!-- PROFILE:{name}:START -->).*?(<!-- PROFILE:{name}:END -->)"
+            readme, count = re.subn(pattern, lambda m: m[1] + "\n" + value + "\n" + m[2], readme, flags=re.S)
+            if count != 1:
+                raise ValueError(f"Expected one {filename} block: {name}")
+        outputs[ROOT / filename] = readme
     for theme in ("dark", "light"):
         outputs[ROOT / f"assets/profile-signals-{theme}.svg"] = dashboard(data, theme == "dark")
     for path, content in outputs.items():
@@ -225,6 +241,10 @@ def main():
     data = json.loads(args.from_snapshot.read_text()) if args.from_snapshot else collect(args.username, args.snapshot_date)
     render(data)
     print(f"Updated {len(data['repositories'])} public repositories; local files only, no commit or push.")
+    pending = [r["name"] for r in data["repositories"]
+               if re.search(r"[\u4e00-\u9fff]", description(r["description"], "en"))]
+    if pending:
+        print("English descriptions need review: " + ", ".join(pending))
 
 
 if __name__ == "__main__":

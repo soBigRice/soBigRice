@@ -1,5 +1,7 @@
 import importlib.util
+import json
 from pathlib import Path
+import re
 import tempfile
 import unittest
 from unittest.mock import patch
@@ -16,6 +18,9 @@ def repo(fork=False, languages=None):
 
 
 class PublicProfileTests(unittest.TestCase):
+    def snapshot(self):
+        return json.loads((Path(__file__).resolve().parents[1] / "assets/profile-data.json").read_text())
+
     def test_fork_stars_count_but_fork_code_is_not_attributed_to_original_work(self):
         original = repo(languages={"JavaScript": 100})
         fork = repo(fork=True, languages={"C": 900_000})
@@ -51,6 +56,39 @@ class PublicProfileTests(unittest.TestCase):
 
     def test_description_cannot_create_a_new_table_column_or_html_control(self):
         self.assertEqual(profile.cell('a|b\n<script>'), 'a\\|b &lt;script&gt;')
+
+    def test_english_tables_preserve_all_repository_links_and_numeric_data(self):
+        data = self.snapshot()
+        chinese, english = profile.blocks(data), profile.blocks(data, "en")
+        for name in ("account", "languages", "original", "forks", "releases"):
+            with self.subTest(section=name):
+                self.assertEqual(re.findall(r"\]\(([^)]+)\)", chinese[name]),
+                                 re.findall(r"\]\(([^)]+)\)", english[name]))
+                self.assertEqual(re.findall(r"\d+(?:[,.%-]\d+)*%?", chinese[name]),
+                                 re.findall(r"\d+(?:[,.%-]\d+)*%?", english[name]))
+                self.assertEqual(chinese[name].count("\n"), english[name].count("\n"))
+        self.assertNotRegex("\n".join(english.values()), r"[\u4e00-\u9fff]")
+
+    def test_source_description_change_does_not_keep_an_outdated_translation(self):
+        source = "一个简单的射击小游戏"
+        self.assertEqual(profile.description(source, "en"), "A simple shooting game.")
+        changed = source + "，支持双人"
+        self.assertEqual(profile.description(changed, "en"), changed)
+        self.assertEqual(profile.description(source, "zh"), source)
+
+    def test_invalid_english_markers_leave_both_languages_and_assets_unchanged(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source_root = Path(__file__).resolve().parents[1]
+            chinese = (source_root / "README.md").read_text()
+            english = (source_root / "README.en.md").read_text().replace("<!-- PROFILE:releases:END -->", "")
+            (root / "README.md").write_text(chinese)
+            (root / "README.en.md").write_text(english)
+            with patch.object(profile, "ROOT", root), self.assertRaisesRegex(ValueError, "README.en.md"):
+                profile.render(self.snapshot())
+            self.assertEqual((root / "README.md").read_text(), chinese)
+            self.assertEqual((root / "README.en.md").read_text(), english)
+            self.assertFalse((root / "assets").exists())
 
     def test_missing_markers_do_not_overwrite_readme_or_create_partial_assets(self):
         with tempfile.TemporaryDirectory() as directory:

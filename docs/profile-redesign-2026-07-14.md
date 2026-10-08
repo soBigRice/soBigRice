@@ -1,6 +1,6 @@
 # GitHub Profile 设计与维护记录
 
-## 当前版本 · 2026-10-08 拾贴与统计卡排版修正
+## 当前版本 · 2026-10-08 中英双语、拾贴与统计卡排版修正
 
 状态：按用户在实际 GitHub 页面的反馈继续改版；发布用于审阅，整体视觉仍待用户验收。第一版与 7 月记录仅为历史，旧的“四项目上限、统计折叠、取消语言卡”已被本次明确需求替代。
 
@@ -14,9 +14,9 @@
 
 ### 展示与维护链路
 
-`README.md` → 霓虹主视觉 → 八项公开指标 → 账号表 / 贡献趋势 / 贡献统计 / UTC+8 提交时段 → 拾贴 · Piklue / soRound OS / LynkCo-DiPlay 三个重点作品展板 → 提交语言图 / 完整语言表 / 技术栈 → 23 个非 Fork 仓库表 → 9 个 Fork 表 → Release 与下载表 → 原有贡献小蛇。
+`README.md`（中文默认入口）↔ `README.en.md`（完整英文版）→ 霓虹主视觉 → 八项公开指标 → 账号表 / 贡献趋势 / 贡献统计 / UTC+8 提交时段 → 拾贴 · Piklue / soRound OS / LynkCo-DiPlay 三个重点作品展板 → 提交语言图 / 完整语言表 / 技术栈 → 23 个非 Fork 仓库表 → 9 个 Fork 表 → Release 与下载表 → 原有贡献小蛇。
 
-`scripts/refresh_profile.py:collect()` → GitHub 公开账号与 owner 仓库 API → 每仓库 languages / releases 分页 → 排除草稿并按 published_at 排序 → `summarize()` → `assets/profile-data.json` → `render()` → `PROFILE:*` 标记内的六块 README 表格与两张 profile-signals SVG。
+`scripts/refresh_profile.py:collect()` → GitHub 公开账号与 owner 仓库 API → 每仓库 languages / releases 分页 → 排除草稿并按 published_at 排序 → `summarize()` → `assets/profile-data.json` → `blocks(data, locale)` / `scripts/profile_copy.en.json` → `render()` → 两种 README 各自 `PROFILE:*` 标记内的六块内容与共享的两张 profile-signals SVG。
 
 刷新方式（Python 标准库 + 已有 GitHub CLI，无安装项）：
 
@@ -26,7 +26,7 @@ PYTHONDONTWRITEBYTECODE=1 python3 scripts/refresh_profile.py --from-snapshot ass
 PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -v
 ```
 
-脚本只更新本地文件，不提交、不推送。所有 API 采集成功、公开性与 README 标记检查通过后才开始写文件；失败报错退出，不用空数据覆盖主页。快照需手动刷新；第三方贡献卡通过服务缓存动态更新。日期为 UTC+8，API open_issues_count 同时包含开放 Issue 与 PR，README 按此标注。
+脚本只更新本地文件，不提交、不推送。所有 API 采集成功、公开性与两种 README 的标记检查通过后才开始写文件；失败报错退出，不用空数据覆盖主页。快照需手动刷新；第三方贡献卡通过服务缓存动态更新。日期为 UTC+8，API open_issues_count 同时包含开放 Issue 与 PR，README 按此标注。
 
 ### 统计真源与取舍（2026-10-07）
 
@@ -77,6 +77,17 @@ PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -v
 - 本地浏览器实际检查浅色与深色：848px 和 820px 内容栏中，两张卡顶部坐标一致；390×844 手机视口下自然上下排列。三张统计图加载成功，页面无横向溢出。
 - 核验内容由最终 GitHub Markdown API 渲染，外层为本地 GitHub 风格预览；实际 GitHub 外层页面仍待用户审阅。预览及截图保留在本任务可视化目录，测试页、尺寸覆盖与本地服务器在检查后关闭。
 - 防复发：Profile 图组不能只按宽屏 README 验证。并排图片须计入图片之间的空白，并同时核对较窄桌面内容栏、手机换行与 GitHub HTML 清理后的结构；不要用删掉统计内容解决排版问题。
+
+### 2026-10-08 · 完整英文版
+
+用户提出英文适配。本版保留中文 Profile 默认入口，在两种语言顶部提供切换；英文完整覆盖身份介绍、三个重点作品、统计口径、技术栈、23 个非 Fork 仓库、9 个 Fork、语言分布、版本与下载、图片替代文字。现有横幅和展板的可见文字已为英文，两版共享素材，不重复制作图片。GitHub Profile 使用静态 Markdown，因此切换入口跳转到英文 README 文件；返回中文入口指向账号主页，没有模拟浏览器语言自动切换。
+
+- `README.en.md` 的作品与统计布局沿用中文，保留 400px 双卡并排与手机自然换行；拾贴和所有官网入口保留。领克“Compatibility & build guide”指向实际核对过的英文 `README.md`，上游署名、有线与无线验证范围、APK 尚未发布的说明同步翻译。
+- `scripts/profile_copy.en.json` 保存生成区的标签与公开仓库简介译文；简介按原始字符串匹配。上游描述改变或新增未翻译简介时，保留新的原文并在刷新命令中打印待审阅仓库，避免旧译文冒充新事实。维护时核对原文并补译；重点作品等标记外内容需同步编辑两种 README。
+- 中文与英文使用同一个公开快照，不额外采集或改变数据口径。`render()` 先验证两版全部标记，再写本地输出；英文标记缺失时，中文文件和素材也不被部分覆盖。
+- 验证：共八项单元检查通过，新增两版表格的链接、行数与数字一致性、原文变化不保留旧译文、英文标记损坏不产生部分输出。使用现有快照刷新后，中文正文、400px 卡组、共享素材和统计快照保持一致。
+- 最终 GitHub Markdown API 两版均为 9 组 picture / 10 张图片 / 6 张表格 / 64 行数据。浏览器实际检查英文深浅桌面 1280×900 与浅色手机 390×844：10 张图片加载，页面无横向溢出，宽表在表内滚动；848px 内容栏双卡并排，手机双卡上下排列。预览中的语言入口可往返，原生 Markdown 入口目标分别核对。截图为 Markdown 预览，GitHub 外层仍由用户实际审阅。
+- 预览页、临时视口与本地服务器在检查后关闭，未安装依赖或产生 Python 字节码缓存；可审阅截图保留在本任务可视化目录。
 
 ---
 

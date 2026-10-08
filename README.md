@@ -1,3 +1,5 @@
+**简体中文** &nbsp; / &nbsp; [English](./README.en.md)
+
 <a href="https://sobigrice.com">
   <img src="./assets/profile-masthead-v2.webp" alt="soBigRice · CODE. CREATE. REPEAT. 喵总与米大饭的黑红霓虹开发工作室，Web / Desktop / Hardware。" width="100%" />
 </a>
