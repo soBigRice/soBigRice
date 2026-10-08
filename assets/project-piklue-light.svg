@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="400" viewBox="0 0 1280 400" role="img" aria-labelledby="title desc">
+<title id="title">拾贴 · Piklue</title><desc id="desc">macOS 剪贴板历史、截图标注与贴图置顶。右侧为官网 favicon.svg 同源产品图标，品牌展板不代表 App 界面。</desc>
+<rect width="1280" height="400" rx="12" fill="#f5f3f1"/>
+<g font-family="Arial,Helvetica,sans-serif">
+<path d="M48 56h28" stroke="#a21d36" stroke-width="3"/>
+<text x="90" y="62" fill="#6d6871" font-size="19" letter-spacing="3">MACOS / EVERYDAY TOOLS</text>
+<text x="48" y="159" fill="#19191b" font-size="88" font-weight="700" letter-spacing="-3">Piklue<tspan fill="#a21d36">.</tspan></text>
+<text x="50" y="211" fill="#6d6871" font-size="28">Everything copied. Still here.</text>
+<path d="M50 248h618" stroke="#dfdadf"/>
+<text x="50" y="291" fill="#19191b" font-size="21" letter-spacing="1">CLIPBOARD / CAPTURE / PIN</text>
+<text x="50" y="343" fill="#6d6871" font-size="18" letter-spacing="2">MACOS / LOCAL FIRST</text>
+<circle cx="991" cy="200" r="165" fill="none" stroke="#dfdadf"/>
+<path d="M991 35a165 165 0 0 1 91 27" fill="none" stroke="#a21d36" stroke-width="4" stroke-linecap="round"/>
+<g transform="translate(879 88) scale(3.5)"><rect width="64" height="64" rx="15" fill="#0B0B0C" />
+  <path d="M17 10h29a7 7 0 0 1 7 7v22L39 53H17a7 7 0 0 1-7-7V17a7 7 0 0 1 7-7Z" fill="#F7F7F6" />
+  <path d="M39 53v-7a7 7 0 0 1 7-7h7Z" fill="#BEC1BF" />
+  <path d="M22 26.5h19" fill="none" stroke="#0B0B0C" stroke-width="3.25" stroke-linecap="round" />
+</g>
+<circle cx="1206" cy="343" r="5" fill="#a21d36"/>
+</g></svg>

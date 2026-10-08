@@ -8,7 +8,7 @@
 
 从 Web 图形到桌面工具，从掌心圆屏到车机适配。喜欢把好奇心做成能运行的东西，把界面、代码和真实设备一起打磨。
 
-[个人主页 ↗](https://sobigrice.com) &nbsp; / &nbsp; [喵总办公室 ↗](https://www.miaozong.cc/) &nbsp; / &nbsp; [技术博客 ↗](https://blog.sobigrice.com) &nbsp; / &nbsp; [所有仓库 ↗](https://github.com/soBigRice?tab=repositories) &nbsp; / &nbsp; [npm ↗](https://www.npmjs.com/package/cesium.path)
+[个人主页 ↗](https://sobigrice.com) &nbsp; / &nbsp; [拾贴官网 ↗](https://piklue.miaozong.cc/) &nbsp; / &nbsp; [喵总办公室 ↗](https://www.miaozong.cc/) &nbsp; / &nbsp; [技术博客 ↗](https://blog.sobigrice.com) &nbsp; / &nbsp; [所有仓库 ↗](https://github.com/soBigRice?tab=repositories) &nbsp; / &nbsp; [npm ↗](https://www.npmjs.com/package/cesium.path)
 
 ## 01 / 开源驾驶舱 · Public Signals
 
@@ -53,6 +53,23 @@
 <sub>动态卡片由 GitHub Profile Summary Cards 生成，使用公开可见数据与服务缓存。卡片的仓库数 / Stars 排除 Fork；上方 API 快照包含 Fork。Commit、PR、Issue 与贡献次数是不同指标，不能直接相加。</sub>
 
 ## 02 / 正在构建 · Recent Builds
+
+### [拾贴 · Piklue](https://piklue.miaozong.cc/) · 复制过的，都还在
+
+<a href="https://piklue.miaozong.cc/">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/project-piklue-dark.svg" />
+    <img src="./assets/project-piklue-light.svg" alt="拾贴 · Piklue：macOS 剪贴板历史、截图标注与贴图置顶。右侧为官网同源产品图标。" width="100%" />
+  </picture>
+</a>
+
+我做的 **macOS 剪贴板工具**：收好文字、链接、图片、文件与截图，需要时快捷键唤出、搜索和再次使用。也能截图标注，把图片、文字或颜色贴在屏幕上，作为随手可看的参考。内容保存在本机。
+
+`macOS` · `剪贴板历史` · `截图标注` · `贴图置顶` · `本地存储`
+
+**[逛拾贴官网 ↗](https://piklue.miaozong.cc/)** &nbsp; / &nbsp; [了解功能](https://piklue.miaozong.cc/#features) &nbsp; / &nbsp; [支持与使用说明](https://piklue.miaozong.cc/support)
+
+<br />
 
 ### [soRound OS](https://github.com/soBigRice/soRound_os) · 掌心里的小世界
 
@@ -123,7 +140,7 @@
 | 工作领域 | 技术与工具 | 对应作品 |
 | --- | --- | --- |
 | Web 与图形 | TypeScript / JavaScript / Vue / React / Three.js / GLSL / WebGL / WebGPU / Cesium | Three Shader Example / cesium.path / Hello WebGPU / AR & XR |
-| 桌面工具 | Rust / Tauri / Swift / macOS / Windows | Port Guardian / oh-fans / ohBangs |
+| 桌面工具 | Rust / Tauri / Swift / macOS / Windows | 拾贴 · Piklue / Port Guardian / oh-fans / ohBangs |
 | 嵌入式与交互 | C / ESP32-S3 / ESP-IDF / LVGL / AMOLED / E-Ink / BLE | soRound OS / WiFi Calendar |
 | 车机适配 | Kotlin / Android 9 / Lynk OS N 2.0 / CarPlay | LynkCo-DiPlay · 基于 DiPlay |
 | 服务与交付 | Node.js / Git / GitHub Actions | API Cache / Lsky Server / NodeMessage / 固件发布 |
