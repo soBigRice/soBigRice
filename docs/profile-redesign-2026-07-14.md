@@ -1,8 +1,8 @@
 # GitHub Profile 设计与维护记录
 
-## 当前版本 · 2026-10-08 中英双语、拾贴与统计卡排版修正
+## 当前版本 · 2026-10-14 动效、中英双语与下载入口
 
-状态：按用户在实际 GitHub 页面的反馈继续改版；发布用于审阅，整体视觉仍待用户验收。第一版与 7 月记录仅为历史，旧的“四项目上限、统计折叠、取消语言卡”已被本次明确需求替代。
+状态：用户于 2026-10-14 明确要求提交并推送当前版本，在实际 GitHub 主页查看动效。发布范围包括横幅与统计面板动效、此前未提交的 Port Guardian 官网介绍及 LynkCo 公开 APK 下载入口、双语统计快照与维护脚本；整体视觉仍待用户验收，提交与远端状态以 Git 为准。第一版与 7 月记录仅为历史，旧的“四项目上限、统计折叠、取消语言卡”已被本次明确需求替代。
 
 ### 当前需求与边界
 
@@ -14,7 +14,7 @@
 
 ### 展示与维护链路
 
-`README.md`（中文默认入口）↔ `README.en.md`（完整英文版）→ 霓虹主视觉 → 八项公开指标 → 账号表 / 贡献趋势 / 贡献统计 / UTC+8 提交时段 → 拾贴 · Piklue / soRound OS / LynkCo-DiPlay 三个重点作品展板 → 提交语言图 / 完整语言表 / 技术栈 → 23 个非 Fork 仓库表 → 9 个 Fork 表 → Release 与下载表 → 原有贡献小蛇。
+`README.md`（中文默认入口）↔ `README.en.md`（完整英文版）→ 霓虹主视觉 → 八项公开指标 → 账号表 / 贡献趋势 / 贡献统计 / UTC+8 提交时段 → 拾贴 · Piklue / Port Guardian / soRound OS / LynkCo-DiPlay 四个重点作品 → 提交语言图 / 完整语言表 / 技术栈 → 23 个非 Fork 仓库表 → 9 个 Fork 表 → Release 与下载表 → 原有贡献小蛇。
 
 `scripts/refresh_profile.py:collect()` → GitHub 公开账号与 owner 仓库 API → 每仓库 languages / releases 分页 → 排除草稿并按 published_at 排序 → `summarize()` → `assets/profile-data.json` → `blocks(data, locale)` / `scripts/profile_copy.en.json` → `render()` → 两种 README 各自 `PROFILE:*` 标记内的六块内容与共享的两张 profile-signals SVG。
 
@@ -28,7 +28,31 @@ PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -v
 
 脚本只更新本地文件，不提交、不推送。所有 API 采集成功、公开性与两种 README 的标记检查通过后才开始写文件；失败报错退出，不用空数据覆盖主页。快照需手动刷新；第三方贡献卡通过服务缓存动态更新。日期为 UTC+8，API open_issues_count 同时包含开放 Issue 与 PR，README 按此标注。
 
-### 统计真源与取舍（2026-10-07）
+### 2026-10-14 · GitHub Profile 动效
+
+- 用户确认目标为当前 GitHub 个人资料页。保持黑红喵总主视觉、原图比例、人物、字标、中英文正文及统计数据；只增加展示动效，已有下载入口等未提交修改完整保留。
+- `scripts/build_masthead_motion.py:masthead()` → 原始 `assets/profile-masthead-v2.webp` 字节以 data URI 嵌入 → `assets/profile-masthead-motion.svg`。SVG 在天空与桌面叠加缓慢流光、星点呼吸及线框转动，无脚本、外部字体或外部图片请求；约 388 KiB。原始 WebP 保留且字节未改，尺寸沿用 2117×743；替换为其他尺寸源图时须同步调整 SVG 画布与轨迹坐标。
+- 两种 README 顶部 `picture` 默认使用动效 SVG；`prefers-reduced-motion: reduce` 选择原始 WebP。SVG 本身也通过该媒体查询隐藏装饰动画，不支持动画的浏览器仍可显示原图。重建横幅：`PYTHONDONTWRITEBYTECODE=1 python3 scripts/build_masthead_motion.py`；统计刷新命令不重建横幅。
+- `scripts/refresh_profile.py:dashboard()` 仍生成相同八项指标：内容依次淡入，下划线装饰在既有轨道内缓慢移动。短线不是进度或占比，数值不进行虚假计数；减少动态效果时立即显示全部内容且停止移动。修改在生成器中维护，离线重渲染不会覆盖动效。
+- 取舍：沿用现有 SVG / CSS 能力，不新增 GIF、动画库或第三方动效服务。现有贡献卡的 `animation=draw` 保持原样；其维护者[动画文档](https://github.com/vn7n24fzkq/github-profile-summary-cards#animations--new)在 2026-10-14 核对，支持 README 图片内的纯 CSS 动画与减少动态效果。
+- 验证：九项现有单元测试与 Diff 空白检查通过；原始图片字节、全部生成表格、快照和 SVG 指标文字逐项与本轮修改前比较一致。GitHub Markdown API 保留横幅 `picture`、减少动态效果媒体条件及两种资源链接。浏览器实际检查 1280×1100 桌面与 390×844 手机深浅主题，图片加载、换行及宽度正常，无水平溢出；重播、主题与静态切换可用，动效截图不同帧存在变化，静态版截图完全相同。实际 GitHub 资源发布与用户主观效果仍待验收；本轮没有切换操作系统减少动态效果设置。
+- 源素材 / GitHub 动效经验：先核对实际原图，再在可分离的 SVG 装饰层实现动作；轨迹不能直接穿过静态人物，首轮截图发现帽子上的额外流光后已收缩到可见天空区。检查必须以 `img` 图像文档方式渲染，不能只看内联 SVG；对入场动画应同时查看过程与结束帧，不能把早期未完全显示的指标判成内容丢失。预览为独立本地 HTML，可离线查看；临时 HTTP 服务和测试标签在完成后关闭，临时文件与截图副本清理。
+
+### 2026-10-09 · Port Guardian 官网入口
+
+- 按用户提供的 [中文官网](https://sobigrice.github.io/port-guardian/) 与其 [英文版](https://sobigrice.github.io/port-guardian/en/) 补充重点作品介绍、下载锚点、源码及 Releases。介绍依据官网公开文案，未固定当前版本号或安装包 URL。
+- `blocks()` 在仓库入口列优先使用 `OFFICIAL_WEBSITES` 中用户确认的官网，未配置的项目继续使用 API `homepage`。这是单独维护的作品入口，未改写 2026-10-07 API 快照或统计日期；重点作品在生成标记外，刷新时保留。
+- 验证：中英文官网均返回 200；旧快照刷新成功，九项单元检查通过，新增检查确认缺少 `homepage` 时仍保留官网且不修改快照数据。新增区使用 GitHub Markdown API 输出检查中文桌面与中英文 390×844 预览，正常换行、无横向溢出；实际 GitHub 外层仍待用户审阅。预览标签、视口覆盖、本地服务器及临时 HTML 已清理。
+
+### 2026-10-09 · LynkCo 公开 APK 下载
+
+- 核对 [R1 公开 Release](https://github.com/soBigRice/LynkCo-DiPlay/releases/tag/lynk-v0.2.12-r1)：`lynk-v0.2.12-r1`，2026-10-09 发布，含 `LynkCo-CarPlay-0.2.12-r1.apk` 与 SHA-256 校验文件。官网已有 `#download` 区与对应 APK；主页下载入口指向此区，后续版本更新由项目官网维护。
+- 两种 README 同步更新作品介绍、下载与发布入口、Fork 引导文案；移除“完整 APK 尚未发布”，保留 DiPlay 署名。按当前发布说明标注无线不能正常使用、仍在调试，有线历史实车确认不等于本次新增实车验收，并链接官网风险声明。
+- 用现有 `collect()` 完整刷新公开数据，避免只补领克 Release 却误标整份快照日期；`assets/profile-data.json`、两种 README 表格与两张统计面板同步为 2026-10-09。公开仓库仍为 32 个，Stars 20、被 Fork 4 次、公开 Release 58 个、附件下载 225 次。新增当前领克描述的英文映射，旧映射保留供历史快照使用。
+- 当前介绍位于生成标记外，`render()` 刷新统计时保留；Release 表和 Fork 表发布入口由快照内公开版本自动生成。项目代码、APK、官网与车机均未修改，Profile 尚未提交或推送。
+- 验证：官网 `#download` / `#disclaimer` 已存在，R1 发布页和 APK 链接返回 200（APK 仅检查响应头，未下载）；离线重渲染与九项现有测试通过，相关 Diff 无空白错误。以 GitHub Markdown API 渲染当前作品区，实际查看中文桌面 1280×720 与中英文手机 390×844，文字和链接自然换行、无横向溢出；实际 GitHub 外层及主观效果仍待用户审阅。临时预览、服务器和视口覆盖已清理。
+
+### 统计真源与取舍（2026-10-07，历史快照）
 
 - 本次 [GitHub REST 公开仓库](https://docs.github.com/en/rest/repos/repos#list-repositories-for-a-user)、[语言字节](https://docs.github.com/en/rest/repos/repos#list-repository-languages) 与 [Release](https://docs.github.com/en/rest/releases/releases#list-releases) 数据：32 仓库、12 Stars、3 次被 Fork、15 种非 Fork 仓库语言、51 个公开 Release、192 次 GitHub 附件下载。下载不含 OTA、镜像、npm，不能当作设备量。
 - 贡献卡使用 MIT 许可的 [GitHub Profile Summary Cards](https://github.com/vn7n24fzkq/github-profile-summary-cards)：profile-details / stats / most-commit-language / productive-time。官方支持自定义颜色和 SVG CSS draw 动画。本次四类卡片的深浅主题共八个 URL 均返回 200 与有效 SVG；UTC 偏移设为 8，动画 2 秒。
@@ -115,7 +139,7 @@ PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -v
 
 - GitHub 公开仓库 API：最新原创项目是 [soRound_os](https://github.com/soBigRice/soRound_os)，最新适配项目是 [LynkCo-DiPlay](https://github.com/soBigRice/LynkCo-DiPlay)，后者为 fork，明确保留 [DiPlay](https://github.com/shihabal3amri/DiPlay) 署名。
 - [soRound OS README](https://github.com/soBigRice/soRound_os/blob/main/README.md)：ESP32-S3 / ESP-IDF / LVGL、466×466 AMOLED、BLE 与双分区 OTA。Profile 不写固定版本号，避免与持续更新的正式 / 内测通道冲突。
-- [LynkCo-DiPlay README](https://github.com/soBigRice/LynkCo-DiPlay/blob/main/README.md)：Lynk OS N 2.0 / Android 9、有线已有实车验证、无线待验证、完整 APK 尚未公开。这是项目已公开记录，不是本任务重新验证了车辆连接；后续发布时应重新核对摘要。
+- 当时的 [LynkCo-DiPlay README](https://github.com/soBigRice/LynkCo-DiPlay/blob/main/README.md)：Lynk OS N 2.0 / Android 9、有线已有实车验证、无线待验证、完整 APK 尚未公开。这是 2026-10-07 的公开记录；下载与无线状态已由上方 2026-10-09 R1 核对结果替代，本任务未重新验证车辆连接。
 - 圆屏原生渲染预览来自 `soBigRice/soRound_os/site/assets/apps/weather.png`，车机首页来自 `soBigRice/LynkCo-DiPlay/site/assets/home.png`。两张都是项目界面预览，不能当作设备验收证据。车机上游及许可说明见其 [第三方声明](https://github.com/soBigRice/LynkCo-DiPlay/blob/main/docs/THIRD_PARTY_NOTICES.md)。
 - [Port Guardian](https://github.com/soBigRice/port-guardian)：扫描、进程溯源与风险分级清理；[Three Shader Example](https://github.com/soBigRice/three_shader_example)：公开案例与在线入口。
 

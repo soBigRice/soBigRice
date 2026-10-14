@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-10-07",
-  "collected_at": "2026-10-07T15:25:35+00:00",
+  "snapshot_date": "2026-10-09",
+  "collected_at": "2026-10-09T09:00:22+00:00",
   "user": {
     "login": "soBigRice",
     "name": "米大饭",
@@ -14,6 +14,39 @@
   },
   "repositories": [
     {
+      "name": "LynkCo-DiPlay",
+      "url": "https://github.com/soBigRice/LynkCo-DiPlay",
+      "description": "领克 OS N 2.0 / Android 9 CarPlay 社区适配 · Public Release APK · 有线 USB 可用，无线调试中 · 基于 DiPlay，非官方实验项目",
+      "homepage": "https://soBigRice.github.io/LynkCo-DiPlay/",
+      "fork": true,
+      "archived": false,
+      "private": false,
+      "visibility": "public",
+      "pushed_at": "2026-10-09T08:43:25Z",
+      "primary_language": "Kotlin",
+      "languages": {
+        "Kotlin": 3520741,
+        "HTML": 25296,
+        "C": 11369,
+        "Python": 10292,
+        "Makefile": 528
+      },
+      "stars": 13,
+      "forks": 2,
+      "open_issues_and_prs": 0,
+      "size_kib": 5466,
+      "license": "GPL-3.0",
+      "releases": [
+        {
+          "tag": "lynk-v0.2.12-r1",
+          "url": "https://github.com/soBigRice/LynkCo-DiPlay/releases/tag/lynk-v0.2.12-r1",
+          "prerelease": false,
+          "published_at": "2026-10-09T08:27:47Z",
+          "downloads": 1
+        }
+      ]
+    },
+    {
       "name": "soRound_os",
       "url": "https://github.com/soBigRice/soRound_os",
       "description": "基于微雪（Waveshare）1.75 寸圆形电容触摸 AMOLED 开发板做的一个精简化系统",
@@ -22,31 +55,59 @@
       "archived": false,
       "private": false,
       "visibility": "public",
-      "pushed_at": "2026-10-07T15:23:04Z",
+      "pushed_at": "2026-10-09T08:19:40Z",
       "primary_language": "C",
       "languages": {
-        "C": 12932918,
-        "Python": 80366,
-        "HTML": 77145,
+        "C": 13100099,
+        "HTML": 89072,
+        "Python": 88186,
+        "JavaScript": 43452,
         "C++": 43408,
-        "Swift": 41010,
+        "Swift": 41829,
         "TypeScript": 28131,
-        "CSS": 21508,
-        "CMake": 18549,
-        "JavaScript": 5774
+        "CMake": 21781,
+        "CSS": 21508
       },
-      "stars": 0,
+      "stars": 3,
       "forks": 0,
       "open_issues_and_prs": 0,
-      "size_kib": 25557,
+      "size_kib": 24618,
       "license": null,
       "releases": [
+        {
+          "tag": "v1.7-beta.33",
+          "url": "https://github.com/soBigRice/soRound_os/releases/tag/v1.7-beta.33",
+          "prerelease": true,
+          "published_at": "2026-10-09T08:01:37Z",
+          "downloads": 0
+        },
+        {
+          "tag": "v1.7-beta.32",
+          "url": "https://github.com/soBigRice/soRound_os/releases/tag/v1.7-beta.32",
+          "prerelease": true,
+          "published_at": "2026-10-08T16:03:13Z",
+          "downloads": 2
+        },
+        {
+          "tag": "v1.7",
+          "url": "https://github.com/soBigRice/soRound_os/releases/tag/v1.7",
+          "prerelease": false,
+          "published_at": "2026-10-08T13:38:16Z",
+          "downloads": 1
+        },
+        {
+          "tag": "v1.7-beta.31",
+          "url": "https://github.com/soBigRice/soRound_os/releases/tag/v1.7-beta.31",
+          "prerelease": true,
+          "published_at": "2026-10-08T12:28:31Z",
+          "downloads": 0
+        },
         {
           "tag": "v1.7-beta.29",
           "url": "https://github.com/soBigRice/soRound_os/releases/tag/v1.7-beta.29",
           "prerelease": true,
           "published_at": "2026-10-07T12:12:16Z",
-          "downloads": 1
+          "downloads": 4
         },
         {
           "tag": "v1.7-beta.28",
@@ -282,50 +343,6 @@
       ]
     },
     {
-      "name": "soBigRice",
-      "url": "https://github.com/soBigRice/soBigRice",
-      "description": "我的个人博客介绍",
-      "homepage": "",
-      "fork": false,
-      "archived": false,
-      "private": false,
-      "visibility": "public",
-      "pushed_at": "2026-10-07T13:39:55Z",
-      "primary_language": null,
-      "languages": {},
-      "stars": 0,
-      "forks": 0,
-      "open_issues_and_prs": 0,
-      "size_kib": 503,
-      "license": null,
-      "releases": []
-    },
-    {
-      "name": "LynkCo-DiPlay",
-      "url": "https://github.com/soBigRice/LynkCo-DiPlay",
-      "description": "领克OSN版本的carplay兼容",
-      "homepage": "https://soBigRice.github.io/LynkCo-DiPlay/",
-      "fork": true,
-      "archived": false,
-      "private": false,
-      "visibility": "public",
-      "pushed_at": "2026-10-07T12:00:14Z",
-      "primary_language": "Kotlin",
-      "languages": {
-        "Kotlin": 3520741,
-        "HTML": 24104,
-        "C": 11369,
-        "Python": 9454,
-        "Makefile": 528
-      },
-      "stars": 8,
-      "forks": 1,
-      "open_issues_and_prs": 0,
-      "size_kib": 5466,
-      "license": "GPL-3.0",
-      "releases": []
-    },
-    {
       "name": "port-guardian",
       "url": "https://github.com/soBigRice/port-guardian",
       "description": "一个Mac和window上的端口进程管理工具",
@@ -334,26 +351,41 @@
       "archived": false,
       "private": false,
       "visibility": "public",
-      "pushed_at": "2026-07-03T05:05:42Z",
+      "pushed_at": "2026-10-09T07:06:39Z",
       "primary_language": "Rust",
       "languages": {
-        "Rust": 114038,
-        "TypeScript": 83043,
-        "CSS": 20755,
-        "HTML": 365
+        "Rust": 123231,
+        "TypeScript": 94962,
+        "CSS": 49343,
+        "JavaScript": 17599,
+        "HTML": 8631
       },
       "stars": 4,
       "forks": 0,
       "open_issues_and_prs": 0,
-      "size_kib": 21003,
+      "size_kib": 26743,
       "license": null,
       "releases": [
+        {
+          "tag": "v0.2.13",
+          "url": "https://github.com/soBigRice/port-guardian/releases/tag/v0.2.13",
+          "prerelease": false,
+          "published_at": "2026-10-09T06:46:11Z",
+          "downloads": 12
+        },
+        {
+          "tag": "v0.2.12",
+          "url": "https://github.com/soBigRice/port-guardian/releases/tag/v0.2.12",
+          "prerelease": false,
+          "published_at": "2026-10-08T09:25:12Z",
+          "downloads": 11
+        },
         {
           "tag": "v0.2.10",
           "url": "https://github.com/soBigRice/port-guardian/releases/tag/v0.2.10",
           "prerelease": false,
           "published_at": "2026-07-03T05:21:05Z",
-          "downloads": 15
+          "downloads": 18
         },
         {
           "tag": "v0.2.9",
@@ -447,6 +479,27 @@
           "downloads": 7
         }
       ]
+    },
+    {
+      "name": "soBigRice",
+      "url": "https://github.com/soBigRice/soBigRice",
+      "description": "我的个人博客介绍",
+      "homepage": "",
+      "fork": false,
+      "archived": false,
+      "private": false,
+      "visibility": "public",
+      "pushed_at": "2026-10-08T23:02:01Z",
+      "primary_language": "Python",
+      "languages": {
+        "Python": 19966
+      },
+      "stars": 0,
+      "forks": 0,
+      "open_issues_and_prs": 0,
+      "size_kib": 911,
+      "license": null,
+      "releases": []
     },
     {
       "name": "three_shader_example",
@@ -1122,37 +1175,37 @@
     "public_repos": 32,
     "original_repos": 23,
     "fork_repos": 9,
-    "stars": 12,
-    "forks_received": 3,
-    "release_count": 51,
-    "downloads": 192,
+    "stars": 20,
+    "forks_received": 4,
+    "release_count": 58,
+    "downloads": 225,
     "languages": {
-      "C": 13020039,
-      "JavaScript": 5564071,
-      "HTML": 1404367,
-      "TypeScript": 342509,
-      "Swift": 283383,
-      "CSS": 156783,
-      "Rust": 114038,
+      "C": 13187220,
+      "JavaScript": 5619348,
+      "HTML": 1424560,
+      "TypeScript": 354428,
+      "Swift": 284202,
+      "CSS": 185371,
+      "Rust": 123231,
+      "Python": 108152,
       "C++": 107768,
-      "Python": 80366,
       "Vue": 66410,
       "GLSL": 27134,
-      "CMake": 18549,
+      "CMake": 21781,
       "Shell": 11281,
       "Dockerfile": 1618,
       "Batchfile": 293
     },
     "language_repos": {
       "C": 3,
-      "Python": 1,
       "HTML": 15,
+      "Python": 2,
+      "JavaScript": 16,
       "C++": 2,
       "Swift": 2,
       "TypeScript": 10,
-      "CSS": 13,
       "CMake": 1,
-      "JavaScript": 15,
+      "CSS": 13,
       "Rust": 1,
       "GLSL": 2,
       "Shell": 2,

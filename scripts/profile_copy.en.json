@@ -79,6 +79,7 @@
     "本人的第一个github网站测试用": "My first experimental website on GitHub.",
     "一个简单的3D网页，基于Three封装，把场景等元素直接封装了，直接调用就好了": "A simple 3D website with reusable Three.js scene components.",
     "领克OSN版本的carplay兼容": "CarPlay compatibility for Lynk & Co OS N.",
+    "领克 OS N 2.0 / Android 9 CarPlay 社区适配 · Public Release APK · 有线 USB 可用，无线调试中 · 基于 DiPlay，非官方实验项目": "Community CarPlay adaptation for Lynk OS N 2.0 / Android 9 · Public Release APK · Wired USB available; wireless under debugging · Based on DiPlay, an unofficial experimental project.",
     "阿里云盘自动签到程序": "An automatic daily check-in utility for Aliyun Drive.",
     "基于 evil.js 优化，引入之后, 可以当作 lodash 使用，然后在特定条件下产生一些错误。": "Based on evil.js; can be used like lodash, but intentionally causes errors under certain conditions."
   }

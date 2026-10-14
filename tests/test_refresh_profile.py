@@ -76,6 +76,19 @@ class PublicProfileTests(unittest.TestCase):
         self.assertEqual(profile.description(changed, "en"), changed)
         self.assertEqual(profile.description(source, "zh"), source)
 
+    def test_confirmed_website_survives_refresh_from_a_snapshot_without_homepage(self):
+        data = self.snapshot()
+        port_guardian = next(r for r in data["repositories"] if r["name"] == "port-guardian")
+        port_guardian["homepage"] = ""
+        original = json.dumps(data, sort_keys=True)
+        for locale, label in (("zh", "访问"), ("en", "Visit")):
+            with self.subTest(locale=locale):
+                catalog = profile.blocks(data, locale)["original"]
+                row = next(line for line in catalog.splitlines() if "| [port-guardian]" in line)
+                self.assertIn(f"[{label}](https://sobigrice.github.io/port-guardian/)", row)
+                self.assertIn("https://github.com/soBigRice/port-guardian/releases", row)
+        self.assertEqual(json.dumps(data, sort_keys=True), original)
+
     def test_invalid_english_markers_leave_both_languages_and_assets_unchanged(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

@@ -25,6 +25,10 @@ CATEGORIES = {
     "ar_view": "AR 实验", "npm-library-universal-template": "开发模板",
     "guigui267.github.io": "早期主页", "3Ddemo": "图形组件", "Graduation-project-WebXR": "XR 实验",
 }
+# User-confirmed sites are editorial links, separate from the dated API snapshot.
+OFFICIAL_WEBSITES = {
+    "port-guardian": "https://sobigrice.github.io/port-guardian/",
+}
 
 
 def api(endpoint, paginate=False):
@@ -161,8 +165,9 @@ def blocks(data, locale="zh"):
             language_name = " / ".join(sorted(r["languages"], key=r["languages"].get, reverse=True)[:3]) or text("未识别")
             kind = text("领克适配" if r["name"] == "LynkCo-DiPlay" else ("Fork" if fork else CATEGORIES.get(r["name"], "其他")))
             entry = [link(text("源码"), r["url"])]
-            if r["homepage"] and r["homepage"].startswith(("https://", "http://")):
-                entry.append(link(text("访问"), r["homepage"]))
+            homepage = OFFICIAL_WEBSITES.get(r["name"], r["homepage"])
+            if homepage and homepage.startswith(("https://", "http://")):
+                entry.append(link(text("访问"), homepage))
             if r["releases"]:
                 entry.append(link(text("发布"), r["url"] + "/releases"))
             rows.append([link(r["name"], r["url"]), f"**{kind}**<br>{cell(description(r['description'] or '—', locale))}",
@@ -195,14 +200,23 @@ def dashboard(data, dark):
     parts = []
     for i, (label, value, color) in enumerate(metrics):
         x, y = 35 + i % 4 * 312, 120 + i // 4 * 153
-        parts.append(f'<text x="{x}" y="{y}" font-size="17" fill="{muted}" letter-spacing="1.5">{label}</text>'
+        parts.append(f'<g class="metric" style="animation-delay:{i * .09:.2f}s">'
+                     f'<text x="{x}" y="{y}" font-size="17" fill="{muted}" letter-spacing="1.5">{label}</text>'
                      f'<text x="{x}" y="{y+69}" font-size="61" fill="{ink}" font-weight="700">{value}</text>'
-                     f'<path d="M{x} {y+96}h245" stroke="{edge}"/><path class="pulse" d="M{x} {y+96}h45" stroke="{color}" stroke-width="3"/>')
+                     f'<path d="M{x} {y+96}h245" stroke="{edge}"/>'
+                     f'<path class="pulse" style="animation-delay:{-i * .55:.2f}s" d="M{x} {y+96}h45" stroke="{color}" stroke-width="3"/></g>')
     description = "；".join(f"{label}: {value}" for label, value, _ in metrics)
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="430" viewBox="0 0 1280 430" role="img" aria-labelledby="title desc">
 <title id="title">soBigRice 公开开源数据</title><desc id="desc">{description}。快照 {data['snapshot_date']}。</desc>
 <defs><linearGradient id="signal"><stop stop-color="{red}"/><stop offset="1" stop-color="{cyan}"/></linearGradient></defs>
-<style>.pulse{{animation:signal 4s ease-in-out infinite}}@keyframes signal{{0%,100%{{stroke-opacity:.45}}50%{{stroke-opacity:1}}}}@media(prefers-reduced-motion:reduce){{.pulse{{animation:none}}}}</style>
+<style>
+.metric{{animation:arrive .75s ease-out both}}
+/* Decorative signal sweeps are independent of the values, never data bars. */
+.pulse{{animation:signal 5s ease-in-out infinite;stroke-linecap:round}}
+@keyframes arrive{{from{{opacity:0;transform:translateY(9px)}}to{{opacity:1;transform:translateY(0)}}}}
+@keyframes signal{{0%,100%{{transform:translateX(0);stroke-opacity:.5}}50%{{transform:translateX(190px);stroke-opacity:1}}}}
+@media(prefers-reduced-motion:reduce){{.metric,.pulse{{animation:none;transform:none;opacity:1}}}}
+</style>
 <rect x="1" y="1" width="1278" height="428" rx="12" fill="{bg}" stroke="{edge}"/>
 <path d="M25 1h1230" stroke="url(#signal)" stroke-width="3"/>
 <g font-family="Arial,Helvetica,sans-serif"><text x="35" y="51" font-size="23" fill="{ink}" letter-spacing="3">PUBLIC SIGNALS</text>

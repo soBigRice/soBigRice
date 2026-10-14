@@ -1,7 +1,10 @@
 **简体中文** &nbsp; / &nbsp; [English](./README.en.md)
 
 <a href="https://sobigrice.com">
-  <img src="./assets/profile-masthead-v2.webp" alt="soBigRice · CODE. CREATE. REPEAT. 喵总与米大饭的黑红霓虹开发工作室，Web / Desktop / Hardware。" width="100%" />
+  <picture>
+    <source media="(prefers-reduced-motion: reduce)" srcset="./assets/profile-masthead-v2.webp" />
+    <img src="./assets/profile-masthead-motion.svg" alt="soBigRice · CODE. CREATE. REPEAT. 喵总与米大饭的黑红霓虹开发工作室，轨道流光与星点缓慢运动。Web / Desktop / Hardware。" width="100%" />
+  </picture>
 </a>
 
 # 米大饭 · soBigRice
@@ -20,20 +23,20 @@
 </picture>
 
 <!-- PROFILE:snapshot:START -->
-数据快照：**2026-10-07** · 仅公开资料 · 日期按 UTC+8。图表与表格的统计范围分别在下方注明。
+数据快照：**2026-10-09** · 仅公开资料 · 日期按 UTC+8。图表与表格的统计范围分别在下方注明。
 <!-- PROFILE:snapshot:END -->
 
 <!-- PROFILE:account:START -->
 | 指标 | 数据 | 范围 |
 | --- | --- | --- |
 | 公开仓库 | 32 | 原创 23 / Fork 9 |
-| 获得的 Stars / Forks | 12 / 3 | 本人名下全部公开仓库，含适配 Fork |
+| 获得的 Stars / Forks | 20 / 4 | 本人名下全部公开仓库，含适配 Fork |
 | 关注者 / 正在关注 | 3 / 3 | GitHub 公开账号数据 |
 | 公开 Gists | 0 | 公开代码片段 |
 | 加入 GitHub | 2020-04-10 | 账号创建日期 |
 | 原创仓库语言种类 | 15 | GitHub Linguist 检测结果，排除 Fork |
-| 公开 Releases | 51 | 含预发布，排除草稿 |
-| Release 附件下载 | 192 | 仅 GitHub 下载次数，不含 OTA / 镜像 / npm |
+| 公开 Releases | 58 | 含预发布，排除草稿 |
+| Release 附件下载 | 225 | 仅 GitHub 下载次数，不含 OTA / 镜像 / npm |
 <!-- PROFILE:account:END -->
 
 ### 贡献趋势 / 原创仓库 / 提交时段
@@ -75,6 +78,16 @@
 
 <br />
 
+### [Port Guardian · 端口守卫](https://sobigrice.github.io/port-guardian/) · 让端口自由，让开发继续
+
+我做的 **macOS / Windows 端口管理工具**：查看 TCP / UDP 端口，追溯进程来自哪个 IDE 或终端，按项目工作目录整理服务。终止前复核进程身份与风险，再选择普通或强制终止。
+
+`Rust` · `Tauri` · `TypeScript` · `macOS` · `Windows`
+
+**[逛项目官网 ↗](https://sobigrice.github.io/port-guardian/)** &nbsp; / &nbsp; [免费下载](https://sobigrice.github.io/port-guardian/#download) &nbsp; / &nbsp; [看源码](https://github.com/soBigRice/port-guardian) &nbsp; / &nbsp; [发布记录](https://github.com/soBigRice/port-guardian/releases)
+
+<br />
+
 ### [soRound OS](https://github.com/soBigRice/soRound_os) · 掌心里的小世界
 
 <a href="https://sobigrice.github.io/soRound_os/">
@@ -101,13 +114,13 @@
   </picture>
 </a>
 
-基于 **[DiPlay](https://github.com/shihabal3amri/DiPlay)** 的领克车机 CarPlay 适配，围绕 Android 9 的连接恢复、界面与诊断做改进。
+基于 **[DiPlay](https://github.com/shihabal3amri/DiPlay)** 的领克车机 CarPlay 适配，面向 **Lynk OS N 2.0 / Android 9**。现已提供公开 APK，包含有线 USB 恢复、音频与媒体控制适配、只读环境检测和诊断导出。
 
 `Kotlin` · `Android 9` · `Lynk OS N 2.0` · `CarPlay`
 
-**[了解项目 ↗](https://sobigrice.github.io/LynkCo-DiPlay/)** &nbsp; / &nbsp; [看源码](https://github.com/soBigRice/LynkCo-DiPlay) &nbsp; / &nbsp; [兼容与构建说明](https://github.com/soBigRice/LynkCo-DiPlay/blob/main/README.zh-CN.md)
+**[下载 APK ↗](https://sobigrice.github.io/LynkCo-DiPlay/#download)** &nbsp; / &nbsp; [项目官网](https://sobigrice.github.io/LynkCo-DiPlay/) &nbsp; / &nbsp; [发布记录](https://github.com/soBigRice/LynkCo-DiPlay/releases) &nbsp; / &nbsp; [看源码](https://github.com/soBigRice/LynkCo-DiPlay) &nbsp; / &nbsp; [兼容与构建说明](https://github.com/soBigRice/LynkCo-DiPlay/blob/main/README.zh-CN.md)
 
-<sub>独立适配，保留上游署名；有线已有实车验证，无线仍待验证。当前公开源码，完整 APK 尚未发布。具体支持范围以项目说明为准。</sub>
+<sub>独立社区实验项目，保留上游署名。有线已有历史实车确认；无线目前不能正常使用，仍在调试。本次发布不代表新增实车验收，安装前请查看<a href="https://sobigrice.github.io/LynkCo-DiPlay/#disclaimer">兼容范围与风险声明</a>。</sub>
 
 <br />
 
@@ -124,18 +137,18 @@
 <!-- PROFILE:languages:START -->
 | 语言 | 代码字节 | 占比 | 涉及原创仓库 |
 | --- | --- | --- | --- |
-| C | 13,020,039 | 61.42% | 3 |
-| JavaScript | 5,564,071 | 26.25% | 15 |
-| HTML | 1,404,367 | 6.62% | 15 |
-| TypeScript | 342,509 | 1.62% | 10 |
-| Swift | 283,383 | 1.34% | 2 |
-| CSS | 156,783 | 0.74% | 13 |
-| Rust | 114,038 | 0.54% | 1 |
-| C++ | 107,768 | 0.51% | 2 |
-| Python | 80,366 | 0.38% | 1 |
+| C | 13,187,220 | 61.27% | 3 |
+| JavaScript | 5,619,348 | 26.11% | 16 |
+| HTML | 1,424,560 | 6.62% | 15 |
+| TypeScript | 354,428 | 1.65% | 10 |
+| Swift | 284,202 | 1.32% | 2 |
+| CSS | 185,371 | 0.86% | 13 |
+| Rust | 123,231 | 0.57% | 1 |
+| Python | 108,152 | 0.50% | 2 |
+| C++ | 107,768 | 0.50% | 2 |
 | Vue | 66,410 | 0.31% | 2 |
 | GLSL | 27,134 | 0.13% | 2 |
-| CMake | 18,549 | 0.09% | 1 |
+| CMake | 21,781 | 0.10% | 1 |
 | Shell | 11,281 | 0.05% | 2 |
 | Dockerfile | 1,618 | 0.01% | 3 |
 | Batchfile | 293 | 0.00% | 1 |
@@ -156,9 +169,9 @@
 <!-- PROFILE:original:START -->
 | 项目 | 方向与说明 | 主要语言 | 数据 | 最近推送 | 许可 | 入口 |
 | --- | --- | --- | --- | --- | --- | --- |
-| [soRound_os](https://github.com/soBigRice/soRound_os) | **嵌入式系统**<br>基于微雪（Waveshare）1.75 寸圆形电容触摸 AMOLED 开发板做的一个精简化系统 | C / Python / HTML | ★ 0<br>⑂ 0<br>Open 0 | 2026-10-07 | 未识别 | [源码](https://github.com/soBigRice/soRound_os) · [访问](https://sobigrice.github.io/soRound_os/) · [发布](https://github.com/soBigRice/soRound_os/releases) |
-| [soBigRice](https://github.com/soBigRice/soBigRice) | **个人主页**<br>我的个人博客介绍 | 未识别 | ★ 0<br>⑂ 0<br>Open 0 | 2026-10-07 | 未识别 | [源码](https://github.com/soBigRice/soBigRice) |
-| [port-guardian](https://github.com/soBigRice/port-guardian) | **桌面工具**<br>一个Mac和window上的端口进程管理工具 | Rust / TypeScript / CSS | ★ 4<br>⑂ 0<br>Open 0 | 2026-07-03 | 未识别 | [源码](https://github.com/soBigRice/port-guardian) · [发布](https://github.com/soBigRice/port-guardian/releases) |
+| [soRound_os](https://github.com/soBigRice/soRound_os) | **嵌入式系统**<br>基于微雪（Waveshare）1.75 寸圆形电容触摸 AMOLED 开发板做的一个精简化系统 | C / HTML / Python | ★ 3<br>⑂ 0<br>Open 0 | 2026-10-09 | 未识别 | [源码](https://github.com/soBigRice/soRound_os) · [访问](https://sobigrice.github.io/soRound_os/) · [发布](https://github.com/soBigRice/soRound_os/releases) |
+| [port-guardian](https://github.com/soBigRice/port-guardian) | **桌面工具**<br>一个Mac和window上的端口进程管理工具 | Rust / TypeScript / CSS | ★ 4<br>⑂ 0<br>Open 0 | 2026-10-09 | 未识别 | [源码](https://github.com/soBigRice/port-guardian) · [访问](https://sobigrice.github.io/port-guardian/) · [发布](https://github.com/soBigRice/port-guardian/releases) |
+| [soBigRice](https://github.com/soBigRice/soBigRice) | **个人主页**<br>我的个人博客介绍 | Python | ★ 0<br>⑂ 0<br>Open 0 | 2026-10-09 | 未识别 | [源码](https://github.com/soBigRice/soBigRice) |
 | [three_shader_example](https://github.com/soBigRice/three_shader_example) | **图形实验**<br>一个vibecoding的threejs的shader案例库 | TypeScript / GLSL / CSS | ★ 0<br>⑂ 0<br>Open 0 | 2026-05-15 | 未识别 | [源码](https://github.com/soBigRice/three_shader_example) · [访问](https://sobigrice.github.io/three_shader_example/) |
 | [ohBangs](https://github.com/soBigRice/ohBangs) | **桌面交互**<br>mac上的灵动岛 | 未识别 | ★ 0<br>⑂ 0<br>Open 0 | 2026-05-04 | MIT | [源码](https://github.com/soBigRice/ohBangs) |
 | [oh-fans](https://github.com/soBigRice/oh-fans) | **桌面工具**<br>我自己做的mac上的一个风扇软件 | Swift / Shell / C | ★ 0<br>⑂ 0<br>Open 0 | 2026-04-27 | 未识别 | [源码](https://github.com/soBigRice/oh-fans) · [访问](https://github.com/soBigRice/oh-fans/releases/latest) · [发布](https://github.com/soBigRice/oh-fans/releases) |
@@ -183,12 +196,12 @@
 
 ## 05 / Fork 与适配 · Built on Open Source
 
-包括正在开发的领克适配与其他公开 Fork。Fork 关系由 GitHub 标识；原作者、上游许可与适用范围以各仓库为准。
+包括已提供公开 APK 的领克适配与其他公开 Fork。Fork 关系由 GitHub 标识；原作者、上游许可与适用范围以各仓库为准。
 
 <!-- PROFILE:forks:START -->
 | 项目 | 方向与说明 | 主要语言 | 数据 | 最近推送 | 许可 | 入口 |
 | --- | --- | --- | --- | --- | --- | --- |
-| [LynkCo-DiPlay](https://github.com/soBigRice/LynkCo-DiPlay) | **领克适配**<br>领克OSN版本的carplay兼容 | Kotlin / HTML / C | ★ 8<br>⑂ 1<br>Open 0 | 2026-10-07 | GPL-3.0 | [源码](https://github.com/soBigRice/LynkCo-DiPlay) · [访问](https://soBigRice.github.io/LynkCo-DiPlay/) |
+| [LynkCo-DiPlay](https://github.com/soBigRice/LynkCo-DiPlay) | **领克适配**<br>领克 OS N 2.0 / Android 9 CarPlay 社区适配 · Public Release APK · 有线 USB 可用，无线调试中 · 基于 DiPlay，非官方实验项目 | Kotlin / HTML / C | ★ 13<br>⑂ 2<br>Open 0 | 2026-10-09 | GPL-3.0 | [源码](https://github.com/soBigRice/LynkCo-DiPlay) · [访问](https://soBigRice.github.io/LynkCo-DiPlay/) · [发布](https://github.com/soBigRice/LynkCo-DiPlay/releases) |
 | [three.path](https://github.com/soBigRice/three.path) | **Fork**<br>three.path is a three.js extension which provides a 3D path geometry builder. | JavaScript | ★ 0<br>⑂ 0<br>Open 0 | 2024-12-04 | MIT | [源码](https://github.com/soBigRice/three.path) |
 | [AR.js](https://github.com/soBigRice/AR.js) | **Fork**<br>Image tracking, Location Based AR, Marker tracking. All on the Web. | JavaScript / HTML / Brainfuck | ★ 0<br>⑂ 0<br>Open 0 | 2024-11-13 | MIT | [源码](https://github.com/soBigRice/AR.js) |
 | [load-bmfont](https://github.com/soBigRice/load-bmfont) | **Fork**<br>loads a BMFont file in Node and the browser | JavaScript | ★ 0<br>⑂ 0<br>Open 0 | 2024-10-31 | MIT | [源码](https://github.com/soBigRice/load-bmfont) |
@@ -206,8 +219,9 @@
 <!-- PROFILE:releases:START -->
 | 项目 | 最近正式版 | 最近发布 | Release 数 | 附件总下载 | 最近发布日期 |
 | --- | --- | --- | --- | --- | --- |
-| [soRound_os](https://github.com/soBigRice/soRound_os) | [v1.6.1](https://github.com/soBigRice/soRound_os/releases/tag/v1.6.1) | [v1.7-beta.29](https://github.com/soBigRice/soRound_os/releases/tag/v1.7-beta.29) · 预发布 | 34 | 28 | 2026-10-07 |
-| [port-guardian](https://github.com/soBigRice/port-guardian) | [v0.2.10](https://github.com/soBigRice/port-guardian/releases/tag/v0.2.10) | [v0.2.10](https://github.com/soBigRice/port-guardian/releases/tag/v0.2.10) | 14 | 149 | 2026-07-03 |
+| [LynkCo-DiPlay](https://github.com/soBigRice/LynkCo-DiPlay) | [lynk-v0.2.12-r1](https://github.com/soBigRice/LynkCo-DiPlay/releases/tag/lynk-v0.2.12-r1) | [lynk-v0.2.12-r1](https://github.com/soBigRice/LynkCo-DiPlay/releases/tag/lynk-v0.2.12-r1) | 1 | 1 | 2026-10-09 |
+| [soRound_os](https://github.com/soBigRice/soRound_os) | [v1.7](https://github.com/soBigRice/soRound_os/releases/tag/v1.7) | [v1.7-beta.33](https://github.com/soBigRice/soRound_os/releases/tag/v1.7-beta.33) · 预发布 | 38 | 34 | 2026-10-09 |
+| [port-guardian](https://github.com/soBigRice/port-guardian) | [v0.2.13](https://github.com/soBigRice/port-guardian/releases/tag/v0.2.13) | [v0.2.13](https://github.com/soBigRice/port-guardian/releases/tag/v0.2.13) | 16 | 175 | 2026-10-09 |
 | [oh-fans](https://github.com/soBigRice/oh-fans) | [v1.0.1](https://github.com/soBigRice/oh-fans/releases/tag/v1.0.1) | [v1.0.1](https://github.com/soBigRice/oh-fans/releases/tag/v1.0.1) | 2 | 15 | 2026-04-24 |
 | [WebGL_heart_beat](https://github.com/soBigRice/WebGL_heart_beat) | [v1.0.0](https://github.com/soBigRice/WebGL_heart_beat/releases/tag/v1.0.0) | [v1.0.0](https://github.com/soBigRice/WebGL_heart_beat/releases/tag/v1.0.0) | 1 | 0 | 2026-03-06 |
 <!-- PROFILE:releases:END -->

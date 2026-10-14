@@ -1,7 +1,10 @@
 **English** &nbsp; / &nbsp; [简体中文](https://github.com/soBigRice)
 
 <a href="https://sobigrice.com">
-  <img src="./assets/profile-masthead-v2.webp" alt="soBigRice · CODE. CREATE. REPEAT. A neon-lit studio with MiaoBoss and Mi Da Fan. Web / Desktop / Hardware." width="100%" />
+  <picture>
+    <source media="(prefers-reduced-motion: reduce)" srcset="./assets/profile-masthead-v2.webp" />
+    <img src="./assets/profile-masthead-motion.svg" alt="soBigRice · CODE. CREATE. REPEAT. MiaoBoss and Mi Da Fan's neon studio with slow orbital light trails and stars. Web / Desktop / Hardware." width="100%" />
+  </picture>
 </a>
 
 # soBigRice
@@ -20,20 +23,20 @@ From web graphics and desktop tools to round displays and in-car integrations. I
 </picture>
 
 <!-- PROFILE:snapshot:START -->
-Data snapshot: **2026-10-07** · Public information only · Dates use UTC+8. Metric scopes are noted below each chart and table.
+Data snapshot: **2026-10-09** · Public information only · Dates use UTC+8. Metric scopes are noted below each chart and table.
 <!-- PROFILE:snapshot:END -->
 
 <!-- PROFILE:account:START -->
 | Metric | Data | Scope |
 | --- | --- | --- |
 | Public repositories | 32 | Non-fork 23 / Fork 9 |
-| Stars / forks received | 12 / 3 | All public repositories owned by this account, including forks and adaptations |
+| Stars / forks received | 20 / 4 | All public repositories owned by this account, including forks and adaptations |
 | Followers / following | 3 / 3 | Public GitHub account data |
 | Public gists | 0 | Public code snippets |
 | Joined GitHub | 2020-04-10 | Account creation date |
 | Languages in non-fork repositories | 15 | Detected by GitHub Linguist; excludes forks |
-| Public releases | 51 | Includes pre-releases; excludes drafts |
-| Release asset downloads | 192 | GitHub asset downloads only; excludes OTA, mirrors and npm |
+| Public releases | 58 | Includes pre-releases; excludes drafts |
+| Release asset downloads | 225 | GitHub asset downloads only; excludes OTA, mirrors and npm |
 <!-- PROFILE:account:END -->
 
 ### Contributions / Non-fork Repositories / Commit Times
@@ -75,6 +78,16 @@ A **macOS clipboard tool** I built to keep text, links, images, files and screen
 
 <br />
 
+### [Port Guardian](https://sobigrice.github.io/port-guardian/en/) · Free your ports. Keep your flow.
+
+A **port manager for macOS and Windows** I built to inspect TCP / UDP ports, trace processes back to the IDE or terminal that started them, and organize services by project working directory. Review process identity and risk before choosing graceful or forced termination.
+
+`Rust` · `Tauri` · `TypeScript` · `macOS` · `Windows`
+
+**[Visit the project ↗](https://sobigrice.github.io/port-guardian/en/)** &nbsp; / &nbsp; [Download free](https://sobigrice.github.io/port-guardian/en/#download) &nbsp; / &nbsp; [Source code](https://github.com/soBigRice/port-guardian) &nbsp; / &nbsp; [Releases](https://github.com/soBigRice/port-guardian/releases)
+
+<br />
+
 ### [soRound OS](https://github.com/soBigRice/soRound_os) · A small screen. A whole world.
 
 <a href="https://sobigrice.github.io/soRound_os/">
@@ -101,13 +114,13 @@ A lightweight system for a **1.75-inch round AMOLED**: watch faces, weather, aud
   </picture>
 </a>
 
-A CarPlay adaptation for Lynk & Co head units, based on **[DiPlay](https://github.com/shihabal3amri/DiPlay)**. It focuses on connection recovery, interface refinements and diagnostics for Android 9.
+A CarPlay adaptation for Lynk & Co head units running **Lynk OS N 2.0 / Android 9**, based on **[DiPlay](https://github.com/shihabal3amri/DiPlay)**. A public APK is now available, with wired USB recovery, audio and media control adaptations, read-only environment checks and diagnostic export.
 
 `Kotlin` · `Android 9` · `Lynk OS N 2.0` · `CarPlay`
 
-**[Explore the project ↗](https://sobigrice.github.io/LynkCo-DiPlay/)** &nbsp; / &nbsp; [Source code](https://github.com/soBigRice/LynkCo-DiPlay) &nbsp; / &nbsp; [Compatibility & build guide](https://github.com/soBigRice/LynkCo-DiPlay/blob/main/README.md)
+**[Download APK ↗](https://sobigrice.github.io/LynkCo-DiPlay/#download)** &nbsp; / &nbsp; [Project website](https://sobigrice.github.io/LynkCo-DiPlay/) &nbsp; / &nbsp; [Releases](https://github.com/soBigRice/LynkCo-DiPlay/releases) &nbsp; / &nbsp; [Source code](https://github.com/soBigRice/LynkCo-DiPlay) &nbsp; / &nbsp; [Compatibility & build guide](https://github.com/soBigRice/LynkCo-DiPlay/blob/main/README.md)
 
-<sub>An independent adaptation with upstream credits retained. Wired connectivity has been tested in a real vehicle; wireless still awaits validation. The source is public, but a complete APK has not been published. See the project documentation for the current support scope.</sub>
+<sub>An independent community experiment with upstream credit preserved. Wired use has prior in-car confirmation; wireless currently does not work properly and remains under debugging. This release does not establish new vehicle acceptance. Read the <a href="https://sobigrice.github.io/LynkCo-DiPlay/#disclaimer">compatibility limits and risk statement</a> before installing.</sub>
 
 <br />
 
@@ -124,18 +137,18 @@ A CarPlay adaptation for Lynk & Co head units, based on **[DiPlay](https://githu
 <!-- PROFILE:languages:START -->
 | Language | Code bytes | Share | Non-fork repositories |
 | --- | --- | --- | --- |
-| C | 13,020,039 | 61.42% | 3 |
-| JavaScript | 5,564,071 | 26.25% | 15 |
-| HTML | 1,404,367 | 6.62% | 15 |
-| TypeScript | 342,509 | 1.62% | 10 |
-| Swift | 283,383 | 1.34% | 2 |
-| CSS | 156,783 | 0.74% | 13 |
-| Rust | 114,038 | 0.54% | 1 |
-| C++ | 107,768 | 0.51% | 2 |
-| Python | 80,366 | 0.38% | 1 |
+| C | 13,187,220 | 61.27% | 3 |
+| JavaScript | 5,619,348 | 26.11% | 16 |
+| HTML | 1,424,560 | 6.62% | 15 |
+| TypeScript | 354,428 | 1.65% | 10 |
+| Swift | 284,202 | 1.32% | 2 |
+| CSS | 185,371 | 0.86% | 13 |
+| Rust | 123,231 | 0.57% | 1 |
+| Python | 108,152 | 0.50% | 2 |
+| C++ | 107,768 | 0.50% | 2 |
 | Vue | 66,410 | 0.31% | 2 |
 | GLSL | 27,134 | 0.13% | 2 |
-| CMake | 18,549 | 0.09% | 1 |
+| CMake | 21,781 | 0.10% | 1 |
 | Shell | 11,281 | 0.05% | 2 |
 | Dockerfile | 1,618 | 0.01% | 3 |
 | Batchfile | 293 | 0.00% | 1 |
@@ -156,9 +169,9 @@ Public non-fork repositories, sorted by last push. Dates use UTC+8. `★` Stars 
 <!-- PROFILE:original:START -->
 | Project | Focus & description | Main languages | Data | Last push | License | Links |
 | --- | --- | --- | --- | --- | --- | --- |
-| [soRound_os](https://github.com/soBigRice/soRound_os) | **Embedded systems**<br>A lightweight system for the Waveshare 1.75-inch round capacitive-touch AMOLED development board. | C / Python / HTML | ★ 0<br>⑂ 0<br>Open 0 | 2026-10-07 | Not detected | [Source](https://github.com/soBigRice/soRound_os) · [Visit](https://sobigrice.github.io/soRound_os/) · [Releases](https://github.com/soBigRice/soRound_os/releases) |
-| [soBigRice](https://github.com/soBigRice/soBigRice) | **Profile**<br>My GitHub profile and personal introduction. | Not detected | ★ 0<br>⑂ 0<br>Open 0 | 2026-10-07 | Not detected | [Source](https://github.com/soBigRice/soBigRice) |
-| [port-guardian](https://github.com/soBigRice/port-guardian) | **Desktop tools**<br>A port and process management tool for macOS and Windows. | Rust / TypeScript / CSS | ★ 4<br>⑂ 0<br>Open 0 | 2026-07-03 | Not detected | [Source](https://github.com/soBigRice/port-guardian) · [Releases](https://github.com/soBigRice/port-guardian/releases) |
+| [soRound_os](https://github.com/soBigRice/soRound_os) | **Embedded systems**<br>A lightweight system for the Waveshare 1.75-inch round capacitive-touch AMOLED development board. | C / HTML / Python | ★ 3<br>⑂ 0<br>Open 0 | 2026-10-09 | Not detected | [Source](https://github.com/soBigRice/soRound_os) · [Visit](https://sobigrice.github.io/soRound_os/) · [Releases](https://github.com/soBigRice/soRound_os/releases) |
+| [port-guardian](https://github.com/soBigRice/port-guardian) | **Desktop tools**<br>A port and process management tool for macOS and Windows. | Rust / TypeScript / CSS | ★ 4<br>⑂ 0<br>Open 0 | 2026-10-09 | Not detected | [Source](https://github.com/soBigRice/port-guardian) · [Visit](https://sobigrice.github.io/port-guardian/) · [Releases](https://github.com/soBigRice/port-guardian/releases) |
+| [soBigRice](https://github.com/soBigRice/soBigRice) | **Profile**<br>My GitHub profile and personal introduction. | Python | ★ 0<br>⑂ 0<br>Open 0 | 2026-10-09 | Not detected | [Source](https://github.com/soBigRice/soBigRice) |
 | [three_shader_example](https://github.com/soBigRice/three_shader_example) | **Graphics experiments**<br>A collection of Three.js shader examples built through vibe coding. | TypeScript / GLSL / CSS | ★ 0<br>⑂ 0<br>Open 0 | 2026-05-15 | Not detected | [Source](https://github.com/soBigRice/three_shader_example) · [Visit](https://sobigrice.github.io/three_shader_example/) |
 | [ohBangs](https://github.com/soBigRice/ohBangs) | **Desktop interaction**<br>A Dynamic Island-style interface for macOS. | Not detected | ★ 0<br>⑂ 0<br>Open 0 | 2026-05-04 | MIT | [Source](https://github.com/soBigRice/ohBangs) |
 | [oh-fans](https://github.com/soBigRice/oh-fans) | **Desktop tools**<br>A fan utility I built for macOS. | Swift / Shell / C | ★ 0<br>⑂ 0<br>Open 0 | 2026-04-27 | Not detected | [Source](https://github.com/soBigRice/oh-fans) · [Visit](https://github.com/soBigRice/oh-fans/releases/latest) · [Releases](https://github.com/soBigRice/oh-fans/releases) |
@@ -183,12 +196,12 @@ Public non-fork repositories, sorted by last push. Dates use UTC+8. `★` Stars 
 
 ## 05 / Built on Open Source · Forks & Adaptations
 
-Includes the Lynk & Co adaptation in development and my other public forks. Fork relationships are identified by GitHub. See each repository for original authors, upstream licenses and scope.
+Includes the Lynk & Co adaptation with a public APK and my other public forks. Fork relationships are identified by GitHub. See each repository for original authors, upstream licenses and scope.
 
 <!-- PROFILE:forks:START -->
 | Project | Focus & description | Main languages | Data | Last push | License | Links |
 | --- | --- | --- | --- | --- | --- | --- |
-| [LynkCo-DiPlay](https://github.com/soBigRice/LynkCo-DiPlay) | **Lynk & Co adaptation**<br>CarPlay compatibility for Lynk &amp; Co OS N. | Kotlin / HTML / C | ★ 8<br>⑂ 1<br>Open 0 | 2026-10-07 | GPL-3.0 | [Source](https://github.com/soBigRice/LynkCo-DiPlay) · [Visit](https://soBigRice.github.io/LynkCo-DiPlay/) |
+| [LynkCo-DiPlay](https://github.com/soBigRice/LynkCo-DiPlay) | **Lynk & Co adaptation**<br>Community CarPlay adaptation for Lynk OS N 2.0 / Android 9 · Public Release APK · Wired USB available; wireless under debugging · Based on DiPlay, an unofficial experimental project. | Kotlin / HTML / C | ★ 13<br>⑂ 2<br>Open 0 | 2026-10-09 | GPL-3.0 | [Source](https://github.com/soBigRice/LynkCo-DiPlay) · [Visit](https://soBigRice.github.io/LynkCo-DiPlay/) · [Releases](https://github.com/soBigRice/LynkCo-DiPlay/releases) |
 | [three.path](https://github.com/soBigRice/three.path) | **Fork**<br>three.path is a three.js extension which provides a 3D path geometry builder. | JavaScript | ★ 0<br>⑂ 0<br>Open 0 | 2024-12-04 | MIT | [Source](https://github.com/soBigRice/three.path) |
 | [AR.js](https://github.com/soBigRice/AR.js) | **Fork**<br>Image tracking, Location Based AR, Marker tracking. All on the Web. | JavaScript / HTML / Brainfuck | ★ 0<br>⑂ 0<br>Open 0 | 2024-11-13 | MIT | [Source](https://github.com/soBigRice/AR.js) |
 | [load-bmfont](https://github.com/soBigRice/load-bmfont) | **Fork**<br>loads a BMFont file in Node and the browser | JavaScript | ★ 0<br>⑂ 0<br>Open 0 | 2024-10-31 | MIT | [Source](https://github.com/soBigRice/load-bmfont) |
@@ -206,8 +219,9 @@ Public releases and asset downloads from repositories owned by this account. Inc
 <!-- PROFILE:releases:START -->
 | Project | Latest stable | Latest release | Release count | Total asset downloads | Last release date |
 | --- | --- | --- | --- | --- | --- |
-| [soRound_os](https://github.com/soBigRice/soRound_os) | [v1.6.1](https://github.com/soBigRice/soRound_os/releases/tag/v1.6.1) | [v1.7-beta.29](https://github.com/soBigRice/soRound_os/releases/tag/v1.7-beta.29) · pre-release | 34 | 28 | 2026-10-07 |
-| [port-guardian](https://github.com/soBigRice/port-guardian) | [v0.2.10](https://github.com/soBigRice/port-guardian/releases/tag/v0.2.10) | [v0.2.10](https://github.com/soBigRice/port-guardian/releases/tag/v0.2.10) | 14 | 149 | 2026-07-03 |
+| [LynkCo-DiPlay](https://github.com/soBigRice/LynkCo-DiPlay) | [lynk-v0.2.12-r1](https://github.com/soBigRice/LynkCo-DiPlay/releases/tag/lynk-v0.2.12-r1) | [lynk-v0.2.12-r1](https://github.com/soBigRice/LynkCo-DiPlay/releases/tag/lynk-v0.2.12-r1) | 1 | 1 | 2026-10-09 |
+| [soRound_os](https://github.com/soBigRice/soRound_os) | [v1.7](https://github.com/soBigRice/soRound_os/releases/tag/v1.7) | [v1.7-beta.33](https://github.com/soBigRice/soRound_os/releases/tag/v1.7-beta.33) · pre-release | 38 | 34 | 2026-10-09 |
+| [port-guardian](https://github.com/soBigRice/port-guardian) | [v0.2.13](https://github.com/soBigRice/port-guardian/releases/tag/v0.2.13) | [v0.2.13](https://github.com/soBigRice/port-guardian/releases/tag/v0.2.13) | 16 | 175 | 2026-10-09 |
 | [oh-fans](https://github.com/soBigRice/oh-fans) | [v1.0.1](https://github.com/soBigRice/oh-fans/releases/tag/v1.0.1) | [v1.0.1](https://github.com/soBigRice/oh-fans/releases/tag/v1.0.1) | 2 | 15 | 2026-04-24 |
 | [WebGL_heart_beat](https://github.com/soBigRice/WebGL_heart_beat) | [v1.0.0](https://github.com/soBigRice/WebGL_heart_beat/releases/tag/v1.0.0) | [v1.0.0](https://github.com/soBigRice/WebGL_heart_beat/releases/tag/v1.0.0) | 1 | 0 | 2026-03-06 |
 <!-- PROFILE:releases:END -->
